@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "award_section_main_images",
+  "collectionName": "award_main_images",
   "info": {
-    "singularName": "award-section-main-image",
-    "pluralName": "award-section-main-images",
-    "displayName": "Award Section Main Image",
+    "singularName": "award-main-image",
+    "pluralName": "award-main-images",
+    "displayName": "Award Main Image",
     "description": ""
   },
   "options": {
@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Image": {
+    "mainImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -22,6 +22,11 @@
         "videos",
         "audios"
       ]
+    },
+    "caption": {
+      "type": "string",
+      "private": true,
+      "default": "default"
     }
   }
 }

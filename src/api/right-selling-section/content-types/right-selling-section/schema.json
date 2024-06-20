@@ -4,30 +4,28 @@
   "info": {
     "singularName": "right-selling-section",
     "pluralName": "right-selling-sections",
-    "displayName": "Right Selling Section",
-    "description": ""
+    "displayName": "Right Selling Section"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Heading": {
+    "heading": {
       "type": "string"
     },
     "buttonText": {
       "type": "string"
     },
     "mainImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -1188,6 +1188,40 @@ export interface ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale
   };
 }
 
+export interface ApiAwardMainImageAwardMainImage extends Schema.SingleType {
+  collectionName: 'award_main_images';
+  info: {
+    singularName: 'award-main-image';
+    pluralName: 'award-main-images';
+    displayName: 'Award Main Image';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    caption: Attribute.String &
+      Attribute.Private &
+      Attribute.DefaultTo<'default'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::award-main-image.award-main-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::award-main-image.award-main-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAwardSectionDetailAwardSectionDetail
   extends Schema.CollectionType {
   collectionName: 'award_section_details';
@@ -1214,38 +1248,6 @@ export interface ApiAwardSectionDetailAwardSectionDetail
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::award-section-detail.award-section-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAwardSectionMainImageAwardSectionMainImage
-  extends Schema.SingleType {
-  collectionName: 'award_section_main_images';
-  info: {
-    singularName: 'award-section-main-image';
-    pluralName: 'award-section-main-images';
-    displayName: 'Award Section Main Image';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::award-section-main-image.award-section-main-image',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::award-section-main-image.award-section-main-image',
       'oneToOne',
       'admin::user'
     > &
@@ -1326,13 +1328,12 @@ export interface ApiExclusiveAgentsSectionExclusiveAgentsSection
     singularName: 'exclusive-agents-section';
     pluralName: 'exclusive-agents-sections';
     displayName: 'Exclusive Agents Section';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
+    heading: Attribute.String;
     subHeading: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1729,13 +1730,12 @@ export interface ApiRightSellingSectionRightSellingSection
     singularName: 'right-selling-section';
     pluralName: 'right-selling-sections';
     displayName: 'Right Selling Section';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
+    heading: Attribute.String;
     buttonText: Attribute.String;
     mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
@@ -1852,8 +1852,8 @@ declare module '@strapi/types' {
       'api::add-new-property-house-for-sale.add-new-property-house-for-sale': ApiAddNewPropertyHouseForSaleAddNewPropertyHouseForSale;
       'api::add-new-property-office-for-rent.add-new-property-office-for-rent': ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent;
       'api::add-new-property-office-for-sale.add-new-property-office-for-sale': ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale;
+      'api::award-main-image.award-main-image': ApiAwardMainImageAwardMainImage;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
-      'api::award-section-main-image.award-section-main-image': ApiAwardSectionMainImageAwardSectionMainImage;
       'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
       'api::contact-page-intro.contact-page-intro': ApiContactPageIntroContactPageIntro;
       'api::exclusive-agents-section.exclusive-agents-section': ApiExclusiveAgentsSectionExclusiveAgentsSection;
