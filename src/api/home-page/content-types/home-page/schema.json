@@ -1,0 +1,80 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSectionHeading": {
+      "type": "string",
+      "required": false
+    },
+    "featuredSectionHeading": {
+      "type": "string",
+      "required": false
+    },
+    "featuredSectionSubHeading": {
+      "type": "text",
+      "required": false
+    },
+    "discoverPopularPropertiesSectionHeading": {
+      "type": "string",
+      "required": false
+    },
+    "discoverPopularPropertiesSectionSubHeading": {
+      "type": "string",
+      "required": false
+    },
+    "experienceSectionHeading": {
+      "type": "string",
+      "required": false
+    },
+    "experienceSectionSubHeading": {
+      "type": "text",
+      "required": false
+    },
+    "experienceSectionButtonText": {
+      "type": "string",
+      "required": false
+    },
+    "ListingforsaleHeading": {
+      "type": "string",
+      "required": false
+    },
+    "listingforsaleNumber": {
+      "type": "string",
+      "required": false
+    },
+    "listingforrentHeading": {
+      "type": "string",
+      "required": false
+    },
+    "listingforrentNumber": {
+      "type": "string",
+      "required": false
+    },
+    "propertysoldHeading": {
+      "type": "string",
+      "required": false
+    },
+    "propertysoldNumber": {
+      "type": "string",
+      "required": false
+    },
+    "popularPropertiesHeading": {
+      "type": "string",
+      "required": false
+    },
+    "popularPropertiesSubHeading": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
