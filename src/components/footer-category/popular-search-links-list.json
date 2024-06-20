@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_category_popular_search_links_lists",
+  "info": {
+    "displayName": "Popular Search Links List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkListItem": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

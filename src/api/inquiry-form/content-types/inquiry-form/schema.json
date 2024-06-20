@@ -1,0 +1,75 @@
+{
+  "kind": "singleType",
+  "collectionName": "inquiry_forms",
+  "info": {
+    "singularName": "inquiry-form",
+    "pluralName": "inquiry-forms",
+    "displayName": "Inquiry Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "selectdepartmentHeading": {
+      "type": "string"
+    },
+    "titleTitle": {
+      "type": "string"
+    },
+    "FirstNameTitle": {
+      "type": "string"
+    },
+    "MiddleNameTitle": {
+      "type": "string"
+    },
+    "SurnameTitle": {
+      "type": "string"
+    },
+    "EmailTitle": {
+      "type": "string"
+    },
+    "PhoneTitle": {
+      "type": "string"
+    },
+    "contactinOnBehalfTitle": {
+      "type": "text"
+    },
+    "preferredMethodTitle": {
+      "type": "string"
+    },
+    "messageTitle": {
+      "type": "string"
+    },
+    "formButtontext": {
+      "type": "string"
+    },
+    "formMainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "selectDepratmentList": {
+      "type": "blocks"
+    },
+    "TitleList": {
+      "type": "blocks"
+    },
+    "preferredMethodList": {
+      "type": "blocks"
+    }
+  }
+}

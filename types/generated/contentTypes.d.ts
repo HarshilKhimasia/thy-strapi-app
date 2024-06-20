@@ -1446,6 +1446,58 @@ export interface ApiFaqSectionFaqSection extends Schema.CollectionType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    AddressTitle: Attribute.String;
+    FullAddress: Attribute.Text;
+    PhoneTitle: Attribute.String;
+    FullPhoneNumber: Attribute.String;
+    FollowUsTitle: Attribute.String;
+    FooterSocialIconsZone: Attribute.DynamicZone<
+      ['footer-category.social-icons']
+    >;
+    MonthlyNewsletterTitle: Attribute.String;
+    PopularSearchZone: Attribute.DynamicZone<
+      ['footer-category.popular-search-links-list']
+    >;
+    QuickLinksZone: Attribute.DynamicZone<['footer-category.quick-links-list']>;
+    DiscoverLinksZone: Attribute.DynamicZone<
+      ['footer-category.discover-links-list']
+    >;
+    SendEmailTitle: Attribute.String;
+    FullSendEmail: Attribute.String;
+    PopularSearchTitle: Attribute.String;
+    QuickLinksTitle: Attribute.String;
+    DiscoverLinksTitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Schema.SingleType {
   collectionName: 'home_pages';
   info: {
@@ -1485,6 +1537,53 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiInquiryFormInquiryForm extends Schema.SingleType {
+  collectionName: 'inquiry_forms';
+  info: {
+    singularName: 'inquiry-form';
+    pluralName: 'inquiry-forms';
+    displayName: 'Inquiry Form';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    subHeading: Attribute.String;
+    selectdepartmentHeading: Attribute.String;
+    titleTitle: Attribute.String;
+    FirstNameTitle: Attribute.String;
+    MiddleNameTitle: Attribute.String;
+    SurnameTitle: Attribute.String;
+    EmailTitle: Attribute.String;
+    PhoneTitle: Attribute.String;
+    contactinOnBehalfTitle: Attribute.Text;
+    preferredMethodTitle: Attribute.String;
+    messageTitle: Attribute.String;
+    formButtontext: Attribute.String;
+    formMainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    selectDepratmentList: Attribute.Blocks;
+    TitleList: Attribute.Blocks;
+    preferredMethodList: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::inquiry-form.inquiry-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::inquiry-form.inquiry-form',
       'oneToOne',
       'admin::user'
     > &
@@ -1761,7 +1860,9 @@ declare module '@strapi/types' {
       'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel': ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel;
       'api::faq-page.faq-page': ApiFaqPageFaqPage;
       'api::faq-section.faq-section': ApiFaqSectionFaqSection;
+      'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::inquiry-form.inquiry-form': ApiInquiryFormInquiryForm;
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
       'api::mission-section-detail.mission-section-detail': ApiMissionSectionDetailMissionSectionDetail;
       'api::mission-section-heading.mission-section-heading': ApiMissionSectionHeadingMissionSectionHeading;

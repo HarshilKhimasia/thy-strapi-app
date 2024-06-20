@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_category_quick_links_lists",
+  "info": {
+    "displayName": "Quick Links List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkListItem": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

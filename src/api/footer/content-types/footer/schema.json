@@ -1,0 +1,84 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "footerLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "AddressTitle": {
+      "type": "string"
+    },
+    "FullAddress": {
+      "type": "text"
+    },
+    "PhoneTitle": {
+      "type": "string"
+    },
+    "FullPhoneNumber": {
+      "type": "string"
+    },
+    "FollowUsTitle": {
+      "type": "string"
+    },
+    "FooterSocialIconsZone": {
+      "type": "dynamiczone",
+      "components": [
+        "footer-category.social-icons"
+      ]
+    },
+    "MonthlyNewsletterTitle": {
+      "type": "string"
+    },
+    "PopularSearchZone": {
+      "type": "dynamiczone",
+      "components": [
+        "footer-category.popular-search-links-list"
+      ]
+    },
+    "QuickLinksZone": {
+      "type": "dynamiczone",
+      "components": [
+        "footer-category.quick-links-list"
+      ]
+    },
+    "DiscoverLinksZone": {
+      "type": "dynamiczone",
+      "components": [
+        "footer-category.discover-links-list"
+      ]
+    },
+    "SendEmailTitle": {
+      "type": "string"
+    },
+    "FullSendEmail": {
+      "type": "string"
+    },
+    "PopularSearchTitle": {
+      "type": "string"
+    },
+    "QuickLinksTitle": {
+      "type": "string"
+    },
+    "DiscoverLinksTitle": {
+      "type": "string"
+    }
+  }
+}

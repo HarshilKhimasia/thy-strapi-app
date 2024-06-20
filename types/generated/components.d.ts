@@ -105,6 +105,53 @@ export interface FaqQuestionAnswerComponent extends Schema.Component {
   };
 }
 
+export interface FooterCategoryDiscoverLinksList extends Schema.Component {
+  collectionName: 'components_footer_category_discover_links_lists';
+  info: {
+    displayName: 'Discover Links List';
+    description: '';
+  };
+  attributes: {
+    linkListItem: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
+export interface FooterCategoryPopularSearchLinksList extends Schema.Component {
+  collectionName: 'components_footer_category_popular_search_links_lists';
+  info: {
+    displayName: 'Popular Search Links List';
+    description: '';
+  };
+  attributes: {
+    linkListItem: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
+export interface FooterCategoryQuickLinksList extends Schema.Component {
+  collectionName: 'components_footer_category_quick_links_lists';
+  info: {
+    displayName: 'Quick Links List';
+    description: '';
+  };
+  attributes: {
+    linkListItem: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
+export interface FooterCategorySocialIcons extends Schema.Component {
+  collectionName: 'components_footer_category_social_icons';
+  info: {
+    displayName: 'Social Icons';
+  };
+  attributes: {
+    socialLink: Attribute.String;
+    socialIconImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -112,6 +159,10 @@ declare module '@strapi/types' {
       'contact-page.contact-page-form-field-component': ContactPageContactPageFormFieldComponent;
       'contact-page.contact-page-location-component': ContactPageContactPageLocationComponent;
       'faq.question-answer-component': FaqQuestionAnswerComponent;
+      'footer-category.discover-links-list': FooterCategoryDiscoverLinksList;
+      'footer-category.popular-search-links-list': FooterCategoryPopularSearchLinksList;
+      'footer-category.quick-links-list': FooterCategoryQuickLinksList;
+      'footer-category.social-icons': FooterCategorySocialIcons;
     }
   }
 }
