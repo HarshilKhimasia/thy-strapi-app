@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_new_property_flat_for_rents",
+  "info": {
+    "singularName": "add-new-property-flat-for-rent",
+    "pluralName": "add-new-property-flat-for-rents",
+    "displayName": "Add New Property (Flat For Rent)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UUID": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "FL[1-9]\\d{5}",
+        "disable-regenerate": true
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "AddingZone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "add-property-category.add-property"
+    }
+  }
+}

@@ -820,79 +820,18 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
   };
 }
 
-export interface ApiAddPropertyCommercialForRentAddPropertyCommercialForRent
+export interface ApiAddNewPropertyCommercialForRentAddNewPropertyCommercialForRent
   extends Schema.CollectionType {
-  collectionName: 'add_property_commercial_for_rents';
+  collectionName: 'add_new_property_commercial_for_rents';
   info: {
-    singularName: 'add-property-commercial-for-rent';
-    pluralName: 'add-property-commercial-for-rents';
-    displayName: 'Add Property (Commercial for rent)';
-    description: '';
+    singularName: 'add-new-property-commercial-for-rent';
+    pluralName: 'add-new-property-commercial-for-rents';
+    displayName: 'Add New Property (Commercial For Rent)';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    PropertyDescription: Attribute.Text;
-    SelectPropertyType: Attribute.Enumeration<
-      [
-        'Room',
-        'Studio flat',
-        'Flat',
-        'Moissanite ',
-        'Semidetached house',
-        'Detached house',
-        'Terraced house',
-        'End of terrace house',
-        'Cottage ',
-        'Bungalow',
-        'Manson '
-      ]
-    >;
-    Department: Attribute.Enumeration<
-      ['Lettings ', 'Sales', 'Commercial ', 'Commercial Sale ', 'Investment ']
-    >;
-    Status: Attribute.Enumeration<
-      ['New  ', 'New instructions', 'Reduced ', 'Under offer ', 'Sold ', 'STC']
-    >;
-    Price: Attribute.String;
-    CouncilTaxBand: Attribute.Enumeration<['A', 'B', 'C', 'D', 'E', 'F']>;
-    Media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    DoorNumber: Attribute.String;
-    StreetName: Attribute.String;
-    SecondLineOfAddress: Attribute.String;
-    TownOrCity: Attribute.String;
-    PostCode: Attribute.String;
-    Latitude: Attribute.String;
-    Longitude: Attribute.String;
-    sizeInSqMtr: Attribute.String;
-    Receptions: Attribute.String;
-    Bedrooms: Attribute.String;
-    Bathrooms: Attribute.String;
-    Garages: Attribute.String;
-    OffStreetParking: Attribute.Enumeration<
-      ['Yes', 'No', 'Free Off street parking']
-    >;
-    YearBuilt: Attribute.String;
-    AvailableFrom: Attribute.Date;
-    Basement: Attribute.String;
-    Loft: Attribute.Enumeration<['Yes', 'No']>;
-    Kitchen: Attribute.Enumeration<
-      ['Separate kitchen', 'Open Plan Kitchen', 'Kitchen and Dinner']
-    >;
-    PropertyType: Attribute.Enumeration<
-      ['Semi detached', 'Detached', 'Terraced', 'End of Terrace']
-    >;
-    FloorNumber: Attribute.Integer;
-    EPCRating: Attribute.String;
-    EnergyIndexKwh: Attribute.String;
-    OwnerAgentNots: Attribute.Text & Attribute.Private;
-    Amenities: Attribute.Blocks;
-    forRent: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<true>;
-    forSale: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
     UUID: Attribute.UID<
       undefined,
       undefined,
@@ -908,17 +847,18 @@ export interface ApiAddPropertyCommercialForRentAddPropertyCommercialForRent
           'disable-regenerate': true;
         }
       >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::add-property-commercial-for-rent.add-property-commercial-for-rent',
+      'api::add-new-property-commercial-for-rent.add-new-property-commercial-for-rent',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::add-property-commercial-for-rent.add-property-commercial-for-rent',
+      'api::add-new-property-commercial-for-rent.add-new-property-commercial-for-rent',
       'oneToOne',
       'admin::user'
     > &
@@ -926,103 +866,321 @@ export interface ApiAddPropertyCommercialForRentAddPropertyCommercialForRent
   };
 }
 
-export interface ApiAddPropertyCommercialForSaleAddPropertyCommercialForSale
+export interface ApiAddNewPropertyCommercialForSaleAddNewPropertyCommercialForSale
   extends Schema.CollectionType {
-  collectionName: 'add_property_commercial_for_sales';
+  collectionName: 'add_new_property_commercial_for_sales';
   info: {
-    singularName: 'add-property-commercial-for-sale';
-    pluralName: 'add-property-commercial-for-sales';
-    displayName: 'Add Property (Commercial for Sale)';
+    singularName: 'add-new-property-commercial-for-sale';
+    pluralName: 'add-new-property-commercial-for-sales';
+    displayName: 'Add New Property (Commercial For Sale)';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    PropertyDescription: Attribute.Text;
-    SelectPropertyType: Attribute.Enumeration<
-      [
-        'Room',
-        'Studio flat',
-        'Flat',
-        'Moissanite ',
-        'Semidetached house',
-        'Detached house',
-        'Terraced house',
-        'End of terrace house',
-        'Cottage ',
-        'Bungalow',
-        'Manson '
-      ]
-    >;
-    Department: Attribute.Enumeration<
-      ['Lettings ', 'Sales', 'Commercial ', 'Commercial Sale ', 'Investment ']
-    >;
-    Status: Attribute.Enumeration<
-      ['New  ', 'New instructions', 'Reduced ', 'Under offer ', 'Sold ', 'STC']
-    >;
-    Price: Attribute.String;
-    CouncilTaxBand: Attribute.Enumeration<['A', 'B', 'C', 'D', 'E', 'F']>;
-    Media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    DoorNumber: Attribute.String;
-    StreetName: Attribute.String;
-    SecondLineOfAddress: Attribute.String;
-    TownOrCity: Attribute.String;
-    PostCode: Attribute.String;
-    Latitude: Attribute.String;
-    Longitude: Attribute.String;
-    sizeInSqMtr: Attribute.String;
-    Receptions: Attribute.String;
-    Bedrooms: Attribute.String;
-    Bathrooms: Attribute.String;
-    Garages: Attribute.String;
-    OffStreetParking: Attribute.Enumeration<
-      ['Yes', 'No', 'Free Off street parking']
-    >;
-    YearBuilt: Attribute.String;
-    AvailableFrom: Attribute.Date;
-    Basement: Attribute.String;
-    Loft: Attribute.Enumeration<['Yes', 'No']>;
-    Kitchen: Attribute.Enumeration<
-      ['Separate kitchen', 'Open Plan Kitchen', 'Kitchen and Dinner']
-    >;
-    PropertyType: Attribute.Enumeration<
-      ['Semi detached', 'Detached', 'Terraced', 'End of Terrace']
-    >;
-    FloorNumber: Attribute.Integer;
-    EPCRating: Attribute.String;
-    EnergyIndexKwh: Attribute.String;
-    OwnerAgentNots: Attribute.Text;
-    forRent: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    forSale: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<true>;
     UUID: Attribute.UID<
       undefined,
       undefined,
       {
+        'disable-regenerate': true;
         'uuid-format': 'CS[1-9]\\d{5}';
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'disable-regenerate': true;
+          'uuid-format': 'CS[1-9]\\d{5}';
+        }
+      >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::add-new-property-commercial-for-sale.add-new-property-commercial-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::add-new-property-commercial-for-sale.add-new-property-commercial-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddNewPropertyFlatForRentAddNewPropertyFlatForRent
+  extends Schema.CollectionType {
+  collectionName: 'add_new_property_flat_for_rents';
+  info: {
+    singularName: 'add-new-property-flat-for-rent';
+    pluralName: 'add-new-property-flat-for-rents';
+    displayName: 'Add New Property (Flat For Rent)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    UUID: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'uuid-format': 'FL[1-9]\\d{5}';
         'disable-regenerate': true;
       }
     > &
       Attribute.CustomField<
         'plugin::strapi-advanced-uuid.uuid',
         {
-          'uuid-format': 'CS[1-9]\\d{5}';
+          'uuid-format': 'FL[1-9]\\d{5}';
           'disable-regenerate': true;
         }
       >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::add-property-commercial-for-sale.add-property-commercial-for-sale',
+      'api::add-new-property-flat-for-rent.add-new-property-flat-for-rent',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::add-property-commercial-for-sale.add-property-commercial-for-sale',
+      'api::add-new-property-flat-for-rent.add-new-property-flat-for-rent',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddNewPropertyFlatForSaleAddNewPropertyFlatForSale
+  extends Schema.CollectionType {
+  collectionName: 'add_new_property_flat_for_sales';
+  info: {
+    singularName: 'add-new-property-flat-for-sale';
+    pluralName: 'add-new-property-flat-for-sales';
+    displayName: 'Add New Property (Flat For Sale)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    UUID: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'uuid-format': 'FS[1-9]\\d{5}';
+        'disable-regenerate': true;
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'uuid-format': 'FS[1-9]\\d{5}';
+          'disable-regenerate': true;
+        }
+      >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::add-new-property-flat-for-sale.add-new-property-flat-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::add-new-property-flat-for-sale.add-new-property-flat-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddNewPropertyHouseForRentAddNewPropertyHouseForRent
+  extends Schema.CollectionType {
+  collectionName: 'add_new_property_house_for_rents';
+  info: {
+    singularName: 'add-new-property-house-for-rent';
+    pluralName: 'add-new-property-house-for-rents';
+    displayName: 'Add New Property (House For Rent)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    UUID: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'uuid-format': 'HL[1-9]\\d{5}';
+        'disable-regenerate': true;
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'uuid-format': 'HL[1-9]\\d{5}';
+          'disable-regenerate': true;
+        }
+      >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::add-new-property-house-for-rent.add-new-property-house-for-rent',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::add-new-property-house-for-rent.add-new-property-house-for-rent',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddNewPropertyHouseForSaleAddNewPropertyHouseForSale
+  extends Schema.CollectionType {
+  collectionName: 'add_new_property_house_for_sales';
+  info: {
+    singularName: 'add-new-property-house-for-sale';
+    pluralName: 'add-new-property-house-for-sales';
+    displayName: 'Add New Property (House For Sale)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    UUID: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'uuid-format': 'HS[1-9]\\d{5}';
+        'disable-regenerate': true;
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'uuid-format': 'HS[1-9]\\d{5}';
+          'disable-regenerate': true;
+        }
+      >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::add-new-property-house-for-sale.add-new-property-house-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::add-new-property-house-for-sale.add-new-property-house-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent
+  extends Schema.CollectionType {
+  collectionName: 'add_new_property_office_for_rents';
+  info: {
+    singularName: 'add-new-property-office-for-rent';
+    pluralName: 'add-new-property-office-for-rents';
+    displayName: 'Add New Property (Office For Rent)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    UUID: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'disable-regenerate': true;
+        'uuid-format': 'OL[1-9]\\d{5}';
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'disable-regenerate': true;
+          'uuid-format': 'OL[1-9]\\d{5}';
+        }
+      >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::add-new-property-office-for-rent.add-new-property-office-for-rent',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::add-new-property-office-for-rent.add-new-property-office-for-rent',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale
+  extends Schema.CollectionType {
+  collectionName: 'add_new_property_office_for_sales';
+  info: {
+    singularName: 'add-new-property-office-for-sale';
+    pluralName: 'add-new-property-office-for-sales';
+    displayName: 'Add New Property (Office For Sale)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    UUID: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'disable-regenerate': true;
+        'uuid-format': 'OS[1-9]\\d{5}';
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'disable-regenerate': true;
+          'uuid-format': 'OS[1-9]\\d{5}';
+        }
+      >;
+    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::add-new-property-office-for-sale.add-new-property-office-for-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::add-new-property-office-for-sale.add-new-property-office-for-sale',
       'oneToOne',
       'admin::user'
     > &
@@ -1587,8 +1745,14 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
-      'api::add-property-commercial-for-rent.add-property-commercial-for-rent': ApiAddPropertyCommercialForRentAddPropertyCommercialForRent;
-      'api::add-property-commercial-for-sale.add-property-commercial-for-sale': ApiAddPropertyCommercialForSaleAddPropertyCommercialForSale;
+      'api::add-new-property-commercial-for-rent.add-new-property-commercial-for-rent': ApiAddNewPropertyCommercialForRentAddNewPropertyCommercialForRent;
+      'api::add-new-property-commercial-for-sale.add-new-property-commercial-for-sale': ApiAddNewPropertyCommercialForSaleAddNewPropertyCommercialForSale;
+      'api::add-new-property-flat-for-rent.add-new-property-flat-for-rent': ApiAddNewPropertyFlatForRentAddNewPropertyFlatForRent;
+      'api::add-new-property-flat-for-sale.add-new-property-flat-for-sale': ApiAddNewPropertyFlatForSaleAddNewPropertyFlatForSale;
+      'api::add-new-property-house-for-rent.add-new-property-house-for-rent': ApiAddNewPropertyHouseForRentAddNewPropertyHouseForRent;
+      'api::add-new-property-house-for-sale.add-new-property-house-for-sale': ApiAddNewPropertyHouseForSaleAddNewPropertyHouseForSale;
+      'api::add-new-property-office-for-rent.add-new-property-office-for-rent': ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent;
+      'api::add-new-property-office-for-sale.add-new-property-office-for-sale': ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
       'api::award-section-main-image.award-section-main-image': ApiAwardSectionMainImageAwardSectionMainImage;
       'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
