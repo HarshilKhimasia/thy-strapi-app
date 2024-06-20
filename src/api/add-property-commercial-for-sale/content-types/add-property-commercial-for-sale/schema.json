@@ -1,0 +1,189 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_property_commercial_for_sales",
+  "info": {
+    "singularName": "add-property-commercial-for-sale",
+    "pluralName": "add-property-commercial-for-sales",
+    "displayName": "Add Property (Commercial for Sale)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "PropertyDescription": {
+      "type": "text"
+    },
+    "SelectPropertyType": {
+      "type": "enumeration",
+      "enum": [
+        "Room",
+        "Studio flat",
+        "Flat",
+        "Moissanite ",
+        "Semidetached house",
+        "Detached house",
+        "Terraced house",
+        "End of terrace house",
+        "Cottage ",
+        "Bungalow",
+        "Manson "
+      ]
+    },
+    "Department": {
+      "type": "enumeration",
+      "enum": [
+        "Lettings ",
+        "Sales",
+        "Commercial ",
+        "Commercial Sale ",
+        "Investment "
+      ]
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "New  ",
+        "New instructions",
+        "Reduced ",
+        "Under offer ",
+        "Sold ",
+        "STC"
+      ]
+    },
+    "Price": {
+      "type": "string"
+    },
+    "CouncilTaxBand": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "Media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "DoorNumber": {
+      "type": "string"
+    },
+    "StreetName": {
+      "type": "string"
+    },
+    "SecondLineOfAddress": {
+      "type": "string"
+    },
+    "TownOrCity": {
+      "type": "string"
+    },
+    "PostCode": {
+      "type": "string"
+    },
+    "Latitude": {
+      "type": "string"
+    },
+    "Longitude": {
+      "type": "string"
+    },
+    "sizeInSqMtr": {
+      "type": "string"
+    },
+    "Receptions": {
+      "type": "string"
+    },
+    "Bedrooms": {
+      "type": "string"
+    },
+    "Bathrooms": {
+      "type": "string"
+    },
+    "Garages": {
+      "type": "string"
+    },
+    "OffStreetParking": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No",
+        "Free Off street parking"
+      ]
+    },
+    "YearBuilt": {
+      "type": "string"
+    },
+    "AvailableFrom": {
+      "type": "date"
+    },
+    "Basement": {
+      "type": "string"
+    },
+    "Loft": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Kitchen": {
+      "type": "enumeration",
+      "enum": [
+        "Separate kitchen",
+        "Open Plan Kitchen",
+        "Kitchen and Dinner"
+      ]
+    },
+    "PropertyType": {
+      "type": "enumeration",
+      "enum": [
+        "Semi detached",
+        "Detached",
+        "Terraced",
+        "End of Terrace"
+      ]
+    },
+    "FloorNumber": {
+      "type": "integer"
+    },
+    "EPCRating": {
+      "type": "string"
+    },
+    "EnergyIndexKwh": {
+      "type": "string"
+    },
+    "OwnerAgentNots": {
+      "type": "text"
+    },
+    "forRent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "forSale": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "UUID": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "CS[1-9]\\d{5}",
+        "disable-regenerate": true
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    }
+  }
+}
