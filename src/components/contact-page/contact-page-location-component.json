@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_contact_page_contact_page_location_components",
+  "info": {
+    "displayName": "Contact Page Location Component"
+  },
+  "options": {},
+  "attributes": {
+    "locationJSONFile": {
+      "type": "json"
+    },
+    "City": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "googleMapLink": {
+      "type": "string"
+    }
+  }
+}

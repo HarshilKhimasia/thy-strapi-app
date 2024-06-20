@@ -885,6 +885,72 @@ export interface ApiAwardSectionMainImageAwardSectionMainImage
   };
 }
 
+export interface ApiContactPageFormContactPageForm
+  extends Schema.CollectionType {
+  collectionName: 'contact_page_forms';
+  info: {
+    singularName: 'contact-page-form';
+    pluralName: 'contact-page-forms';
+    displayName: 'Contact Page Form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    formHeading: Attribute.String;
+    fieldZone: Attribute.DynamicZone<
+      ['contact-page.contact-page-form-field-component']
+    >;
+    formButtonText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page-form.contact-page-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page-form.contact-page-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactPageIntroContactPageIntro extends Schema.SingleType {
+  collectionName: 'contact_page_intros';
+  info: {
+    singularName: 'contact-page-intro';
+    pluralName: 'contact-page-intros';
+    displayName: 'Contact Page Intro';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    para: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page-intro.contact-page-intro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page-intro.contact-page-intro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExclusiveAgentsSectionExclusiveAgentsSection
   extends Schema.SingleType {
   collectionName: 'exclusive_agents_sections';
@@ -944,6 +1010,67 @@ export interface ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqPageFaqPage extends Schema.SingleType {
+  collectionName: 'faq_pages';
+  info: {
+    singularName: 'faq-page';
+    pluralName: 'faq-pages';
+    displayName: 'FAQ Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageHeading: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-page.faq-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-page.faq-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqSectionFaqSection extends Schema.CollectionType {
+  collectionName: 'faq_sections';
+  info: {
+    singularName: 'faq-section';
+    pluralName: 'faq-sections';
+    displayName: 'FAQ Section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainQuestion: Attribute.String;
+    questionNAnswer: Attribute.DynamicZone<['faq.question-answer-component']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-section.faq-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-section.faq-section',
       'oneToOne',
       'admin::user'
     > &
@@ -1061,6 +1188,37 @@ export interface ApiMissionSectionDetailMissionSectionDetail
   };
 }
 
+export interface ApiMissionSectionHeadingMissionSectionHeading
+  extends Schema.SingleType {
+  collectionName: 'mission_section_headings';
+  info: {
+    singularName: 'mission-section-heading';
+    pluralName: 'mission-section-headings';
+    displayName: 'Mission Section Heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mission-section-heading.mission-section-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mission-section-heading.mission-section-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership
   extends Schema.SingleType {
   collectionName: 'our_accreditations_and_memberships';
@@ -1165,6 +1323,41 @@ export interface ApiRightSellingSectionDetailRightSellingSectionDetail
   };
 }
 
+export interface ApiVisitOurOfficeVisitOurOffice extends Schema.CollectionType {
+  collectionName: 'visit_our_offices';
+  info: {
+    singularName: 'visit-our-office';
+    pluralName: 'visit-our-offices';
+    displayName: 'Visit Our Office Section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    subHeading: Attribute.Text;
+    locationZone: Attribute.DynamicZone<
+      ['contact-page.contact-page-location-component']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::visit-our-office.visit-our-office',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::visit-our-office.visit-our-office',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1186,14 +1379,20 @@ declare module '@strapi/types' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
       'api::award-section-main-image.award-section-main-image': ApiAwardSectionMainImageAwardSectionMainImage;
+      'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
+      'api::contact-page-intro.contact-page-intro': ApiContactPageIntroContactPageIntro;
       'api::exclusive-agents-section.exclusive-agents-section': ApiExclusiveAgentsSectionExclusiveAgentsSection;
       'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel': ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel;
+      'api::faq-page.faq-page': ApiFaqPageFaqPage;
+      'api::faq-section.faq-section': ApiFaqSectionFaqSection;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
       'api::mission-section-detail.mission-section-detail': ApiMissionSectionDetailMissionSectionDetail;
+      'api::mission-section-heading.mission-section-heading': ApiMissionSectionHeadingMissionSectionHeading;
       'api::our-accreditations-and-membership.our-accreditations-and-membership': ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership;
       'api::right-selling-section.right-selling-section': ApiRightSellingSectionRightSellingSection;
       'api::right-selling-section-detail.right-selling-section-detail': ApiRightSellingSectionDetailRightSellingSectionDetail;
+      'api::visit-our-office.visit-our-office': ApiVisitOurOfficeVisitOurOffice;
     }
   }
 }

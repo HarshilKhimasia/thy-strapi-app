@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_page_forms",
+  "info": {
+    "singularName": "contact-page-form",
+    "pluralName": "contact-page-forms",
+    "displayName": "Contact Page Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "formHeading": {
+      "type": "string"
+    },
+    "fieldZone": {
+      "type": "dynamiczone",
+      "components": [
+        "contact-page.contact-page-form-field-component"
+      ]
+    },
+    "formButtonText": {
+      "type": "string"
+    }
+  }
+}

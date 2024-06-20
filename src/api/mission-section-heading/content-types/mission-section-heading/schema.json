@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "mission_section_headings",
+  "info": {
+    "singularName": "mission-section-heading",
+    "pluralName": "mission-section-headings",
+    "displayName": "Mission Section Heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}

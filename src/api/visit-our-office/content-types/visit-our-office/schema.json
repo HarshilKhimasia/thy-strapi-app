@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visit_our_offices",
+  "info": {
+    "singularName": "visit-our-office",
+    "pluralName": "visit-our-offices",
+    "displayName": "Visit Our Office Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "locationZone": {
+      "type": "dynamiczone",
+      "components": [
+        "contact-page.contact-page-location-component"
+      ]
+    }
+  }
+}

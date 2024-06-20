@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_page_intros",
+  "info": {
+    "singularName": "contact-page-intro",
+    "pluralName": "contact-page-intros",
+    "displayName": "Contact Page Intro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "para": {
+      "type": "text"
+    }
+  }
+}
