@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "award_section_main_images",
+  "info": {
+    "singularName": "award-section-main-image",
+    "pluralName": "award-section-main-images",
+    "displayName": "Award Section Main Image",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

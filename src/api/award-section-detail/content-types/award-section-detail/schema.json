@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "award_section_details",
+  "info": {
+    "singularName": "award-section-detail",
+    "pluralName": "award-section-details",
+    "displayName": "Award Section Detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Number": {
+      "type": "string"
+    },
+    "Unit": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "string"
+    }
+  }
+}

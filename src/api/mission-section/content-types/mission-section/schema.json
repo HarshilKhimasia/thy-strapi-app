@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mission_sections",
+  "info": {
+    "singularName": "mission-section",
+    "pluralName": "mission-sections",
+    "displayName": "Mission Section Para",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "missionPara": {
+      "type": "text"
+    }
+  }
+}

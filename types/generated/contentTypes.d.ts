@@ -362,52 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHomePageHomePage extends Schema.SingleType {
-  collectionName: 'home_pages';
-  info: {
-    singularName: 'home-page';
-    pluralName: 'home-pages';
-    displayName: 'Home Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heroSectionHeading: Attribute.String;
-    featuredSectionHeading: Attribute.String;
-    featuredSectionSubHeading: Attribute.Text;
-    discoverPopularPropertiesSectionHeading: Attribute.String;
-    discoverPopularPropertiesSectionSubHeading: Attribute.String;
-    experienceSectionHeading: Attribute.String;
-    experienceSectionSubHeading: Attribute.Text;
-    experienceSectionButtonText: Attribute.String;
-    ListingforsaleHeading: Attribute.String;
-    listingforsaleNumber: Attribute.String;
-    listingforrentHeading: Attribute.String;
-    listingforrentNumber: Attribute.String;
-    propertysoldHeading: Attribute.String;
-    propertysoldNumber: Attribute.String;
-    popularPropertiesHeading: Attribute.String;
-    popularPropertiesSubHeading: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::home-page.home-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::home-page.home-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -636,6 +590,53 @@ export interface PluginContentReleasesReleaseAction
   };
 }
 
+export interface PluginI18NLocale extends Schema.CollectionType {
+  collectionName: 'i18n_locale';
+  info: {
+    singularName: 'locale';
+    pluralName: 'locales';
+    collectionName: 'locales';
+    displayName: 'Locale';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
+    code: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUsersPermissionsPermission
   extends Schema.CollectionType {
   collectionName: 'up_permissions';
@@ -787,46 +788,376 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface PluginI18NLocale extends Schema.CollectionType {
-  collectionName: 'i18n_locale';
+export interface ApiAboutPageAboutPage extends Schema.SingleType {
+  collectionName: 'about_pages';
   info: {
-    singularName: 'locale';
-    pluralName: 'locales';
-    collectionName: 'locales';
-    displayName: 'Locale';
+    singularName: 'about-page';
+    pluralName: 'about-pages';
+    displayName: 'About Page';
     description: '';
   };
   options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
+    draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 50;
-        },
-        number
-      >;
-    code: Attribute.String & Attribute.Unique;
+    pageHeading: Attribute.String;
+    pageBannerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'plugin::i18n.locale',
+      'api::about-page.about-page',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'plugin::i18n.locale',
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAwardSectionDetailAwardSectionDetail
+  extends Schema.CollectionType {
+  collectionName: 'award_section_details';
+  info: {
+    singularName: 'award-section-detail';
+    pluralName: 'award-section-details';
+    displayName: 'Award Section Detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Number: Attribute.String;
+    Unit: Attribute.String;
+    Text: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::award-section-detail.award-section-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::award-section-detail.award-section-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAwardSectionMainImageAwardSectionMainImage
+  extends Schema.SingleType {
+  collectionName: 'award_section_main_images';
+  info: {
+    singularName: 'award-section-main-image';
+    pluralName: 'award-section-main-images';
+    displayName: 'Award Section Main Image';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::award-section-main-image.award-section-main-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::award-section-main-image.award-section-main-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExclusiveAgentsSectionExclusiveAgentsSection
+  extends Schema.SingleType {
+  collectionName: 'exclusive_agents_sections';
+  info: {
+    singularName: 'exclusive-agents-section';
+    pluralName: 'exclusive-agents-sections';
+    displayName: 'Exclusive Agents Section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    subHeading: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::exclusive-agents-section.exclusive-agents-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::exclusive-agents-section.exclusive-agents-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel
+  extends Schema.CollectionType {
+  collectionName: 'exclusive_agents_section_carousels';
+  info: {
+    singularName: 'exclusive-agents-section-carousel';
+    pluralName: 'exclusive-agents-section-carousels';
+    displayName: 'Exclusive Agents Section Carousel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Attribute.String;
+    Designation: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Schema.SingleType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'Home Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heroSectionHeading: Attribute.String;
+    featuredSectionHeading: Attribute.String;
+    featuredSectionSubHeading: Attribute.Text;
+    discoverPopularPropertiesSectionHeading: Attribute.String;
+    discoverPopularPropertiesSectionSubHeading: Attribute.String;
+    experienceSectionHeading: Attribute.String;
+    experienceSectionSubHeading: Attribute.Text;
+    experienceSectionButtonText: Attribute.String;
+    ListingforsaleHeading: Attribute.String;
+    listingforsaleNumber: Attribute.String;
+    listingforrentHeading: Attribute.String;
+    listingforrentNumber: Attribute.String;
+    propertysoldHeading: Attribute.String;
+    propertysoldNumber: Attribute.String;
+    popularPropertiesHeading: Attribute.String;
+    popularPropertiesSubHeading: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMissionSectionMissionSection extends Schema.CollectionType {
+  collectionName: 'mission_sections';
+  info: {
+    singularName: 'mission-section';
+    pluralName: 'mission-sections';
+    displayName: 'Mission Section Para';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    missionPara: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mission-section.mission-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mission-section.mission-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMissionSectionDetailMissionSectionDetail
+  extends Schema.CollectionType {
+  collectionName: 'mission_section_details';
+  info: {
+    singularName: 'mission-section-detail';
+    pluralName: 'mission-section-details';
+    displayName: 'Mission Section Detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heading: Attribute.String;
+    subHeading: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mission-section-detail.mission-section-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mission-section-detail.mission-section-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership
+  extends Schema.SingleType {
+  collectionName: 'our_accreditations_and_memberships';
+  info: {
+    singularName: 'our-accreditations-and-membership';
+    pluralName: 'our-accreditations-and-memberships';
+    displayName: 'Our accreditations & membership';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    subHeading: Attribute.Text;
+    partnerImages: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-accreditations-and-membership.our-accreditations-and-membership',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-accreditations-and-membership.our-accreditations-and-membership',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRightSellingSectionRightSellingSection
+  extends Schema.SingleType {
+  collectionName: 'right_selling_sections';
+  info: {
+    singularName: 'right-selling-section';
+    pluralName: 'right-selling-sections';
+    displayName: 'Right Selling Section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    buttonText: Attribute.String;
+    mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::right-selling-section.right-selling-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::right-selling-section.right-selling-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRightSellingSectionDetailRightSellingSectionDetail
+  extends Schema.CollectionType {
+  collectionName: 'right_selling_section_details';
+  info: {
+    singularName: 'right-selling-section-detail';
+    pluralName: 'right-selling-section-details';
+    displayName: 'Right Selling Section Detail';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heading: Attribute.String;
+    subHeading: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::right-selling-section-detail.right-selling-section-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::right-selling-section-detail.right-selling-section-detail',
       'oneToOne',
       'admin::user'
     > &
@@ -844,15 +1175,25 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::home-page.home-page': ApiHomePageHomePage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
+      'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'plugin::i18n.locale': PluginI18NLocale;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
+      'api::award-section-main-image.award-section-main-image': ApiAwardSectionMainImageAwardSectionMainImage;
+      'api::exclusive-agents-section.exclusive-agents-section': ApiExclusiveAgentsSectionExclusiveAgentsSection;
+      'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel': ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::mission-section.mission-section': ApiMissionSectionMissionSection;
+      'api::mission-section-detail.mission-section-detail': ApiMissionSectionDetailMissionSectionDetail;
+      'api::our-accreditations-and-membership.our-accreditations-and-membership': ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership;
+      'api::right-selling-section.right-selling-section': ApiRightSellingSectionRightSellingSection;
+      'api::right-selling-section-detail.right-selling-section-detail': ApiRightSellingSectionDetailRightSellingSectionDetail;
     }
   }
 }

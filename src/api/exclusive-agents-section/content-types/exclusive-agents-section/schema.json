@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "exclusive_agents_sections",
+  "info": {
+    "singularName": "exclusive-agents-section",
+    "pluralName": "exclusive-agents-sections",
+    "displayName": "Exclusive Agents Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    }
+  }
+}
