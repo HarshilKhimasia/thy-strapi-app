@@ -5,6 +5,7 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
   info: {
     displayName: 'Add Property';
     icon: 'stack';
+    description: '';
   };
   attributes: {
     Title: Attribute.String;
@@ -65,6 +66,9 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
     Amenities: Attribute.Blocks;
     forRent: Attribute.Boolean & Attribute.Required;
     forSale: Attribute.Boolean & Attribute.Required;
+    featuredProperty: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
   };
 }
 

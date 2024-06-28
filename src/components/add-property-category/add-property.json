@@ -2,7 +2,8 @@
   "collectionName": "components_add_property_category_add_properties",
   "info": {
     "displayName": "Add Property",
-    "icon": "stack"
+    "icon": "stack",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -64,14 +65,15 @@
       ]
     },
     "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "DoorNumber": {
       "type": "string"
@@ -171,6 +173,11 @@
     },
     "forSale": {
       "type": "boolean",
+      "required": true
+    },
+    "featuredProperty": {
+      "type": "boolean",
+      "default": false,
       "required": true
     }
   }

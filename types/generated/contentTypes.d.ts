@@ -1605,6 +1605,9 @@ export interface ApiMissionSectionMissionSection extends Schema.CollectionType {
   };
   attributes: {
     missionPara: Attribute.Text;
+    isHeading: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

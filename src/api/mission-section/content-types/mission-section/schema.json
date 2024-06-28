@@ -14,6 +14,11 @@
   "attributes": {
     "missionPara": {
       "type": "text"
+    },
+    "isHeading": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
