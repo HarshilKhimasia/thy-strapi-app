@@ -1352,6 +1352,41 @@ export interface ApiContactPageIntroContactPageIntro extends Schema.SingleType {
   };
 }
 
+export interface ApiCtaSectionCtaSection extends Schema.CollectionType {
+  collectionName: 'cta_sections';
+  info: {
+    singularName: 'cta-section';
+    pluralName: 'cta-sections';
+    displayName: 'cta section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageCta: Attribute.String;
+    ctaHeading: Attribute.String;
+    buttonText: Attribute.String;
+    numberButtonText: Attribute.String;
+    ctaSubHeading: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cta-section.cta-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::cta-section.cta-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExclusiveAgentsSectionExclusiveAgentsSection
   extends Schema.SingleType {
   collectionName: 'exclusive_agents_sections';
@@ -1891,6 +1926,7 @@ declare module '@strapi/types' {
       'api::compare-page.compare-page': ApiComparePageComparePage;
       'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
       'api::contact-page-intro.contact-page-intro': ApiContactPageIntroContactPageIntro;
+      'api::cta-section.cta-section': ApiCtaSectionCtaSection;
       'api::exclusive-agents-section.exclusive-agents-section': ApiExclusiveAgentsSectionExclusiveAgentsSection;
       'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel': ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel;
       'api::faq-page.faq-page': ApiFaqPageFaqPage;
