@@ -88,13 +88,14 @@ export interface ContactPageContactPageLocationComponent
   collectionName: 'components_contact_page_contact_page_location_components';
   info: {
     displayName: 'Contact Page Location Component';
+    description: '';
   };
   attributes: {
-    locationJSONFile: Attribute.JSON;
     City: Attribute.String;
     address: Attribute.Text;
     phoneNumber: Attribute.String;
     googleMapLink: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

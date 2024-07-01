@@ -1,13 +1,11 @@
 {
   "collectionName": "components_contact_page_contact_page_location_components",
   "info": {
-    "displayName": "Contact Page Location Component"
+    "displayName": "Contact Page Location Component",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "locationJSONFile": {
-      "type": "json"
-    },
     "City": {
       "type": "string"
     },
@@ -19,6 +17,16 @@
     },
     "googleMapLink": {
       "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

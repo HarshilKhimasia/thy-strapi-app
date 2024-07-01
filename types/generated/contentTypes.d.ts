@@ -1255,6 +1255,37 @@ export interface ApiAwardSectionDetailAwardSectionDetail
   };
 }
 
+export interface ApiComparePageComparePage extends Schema.SingleType {
+  collectionName: 'compare_pages';
+  info: {
+    singularName: 'compare-page';
+    pluralName: 'compare-pages';
+    displayName: 'Compare Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageHeading: Attribute.String;
+    mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::compare-page.compare-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::compare-page.compare-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactPageFormContactPageForm
   extends Schema.CollectionType {
   collectionName: 'contact_page_forms';
@@ -1857,6 +1888,7 @@ declare module '@strapi/types' {
       'api::add-new-property-office-for-sale.add-new-property-office-for-sale': ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale;
       'api::award-main-image.award-main-image': ApiAwardMainImageAwardMainImage;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
+      'api::compare-page.compare-page': ApiComparePageComparePage;
       'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
       'api::contact-page-intro.contact-page-intro': ApiContactPageIntroContactPageIntro;
       'api::exclusive-agents-section.exclusive-agents-section': ApiExclusiveAgentsSectionExclusiveAgentsSection;

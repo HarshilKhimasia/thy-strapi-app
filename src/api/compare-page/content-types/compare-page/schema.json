@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "compare_pages",
+  "info": {
+    "singularName": "compare-page",
+    "pluralName": "compare-pages",
+    "displayName": "Compare Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageHeading": {
+      "type": "string"
+    },
+    "mainImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
