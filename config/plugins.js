@@ -2,13 +2,13 @@ module.exports = ({ env }) => ({
   upload: {
     provider: "wasabi",
     providerOptions: {
-      region: "eu-west-1",
-      accessKeyId: "UD685VP1TOT5UNIMOMZG",
-      secretAccessKey: "EqOEYVhJXQz4RwzDP5VuHtTl6rS8ycI6v3JDQmHD",
-      bucket: "thy-test-bucket2",
-      cdnUrl: "https://thy-test.global.ssl.fastly.net",
+      region: env("WASABI_REGION"),
+      accessKeyId: env("WASABI_ACCESS_KEY_ID"),
+      secretAccessKey: env("WASABI_SECRET_ACCESS_KEY"),
+      bucket: env("WASABI_BUCKET_NAME"),
+      cdnUrl: env("WASABI_CDN_URL"),
       params: {
-        ACL: "public-read", // Optional: Set ACL for uploaded objects
+        ACL: "private", // Optional: Set ACL for uploaded objects
       },
     },
   },
