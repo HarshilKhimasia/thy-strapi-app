@@ -7,6 +7,9 @@ module.exports = ({ env }) => ({
       secretAccessKey: "EqOEYVhJXQz4RwzDP5VuHtTl6rS8ycI6v3JDQmHD",
       bucket: "thy-test-bucket2",
       cdnUrl: "https://thy-test.global.ssl.fastly.net",
+      params: {
+        ACL: "public-read", // Optional: Set ACL for uploaded objects
+      },
     },
   },
 });
