@@ -1,15 +1,12 @@
 module.exports = ({ env }) => ({
   upload: {
-    provider: "aws-s3",
+    provider: "wasabi",
     providerOptions: {
-      accessKeyId: env("WASABI_ACCESS_KEY_ID"),
-      secretAccessKey: env("WASABI_ACCESS_SECRET"),
-      region: env("WASABI_REGION"),
-      endpoint: env("WASABI_ENDPOINT"), // This is important for Wasabi
-      s3ForcePathStyle: true, // Required for Wasabi
-      params: {
-        Bucket: env("WASABI_BUCKET"),
-      },
+      region: "eu-west-1",
+      accessKeyId: "UD685VP1TOT5UNIMOMZG",
+      secretAccessKey: "EqOEYVhJXQz4RwzDP5VuHtTl6rS8ycI6v3JDQmHD",
+      bucket: "thy-test-bucket2",
+      cdnUrl: "https://thy-test.global.ssl.fastly.net",
     },
   },
 });
