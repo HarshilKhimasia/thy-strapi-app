@@ -3,12 +3,14 @@ module.exports = ({ env }) => ({
     config: {
       provider: "@strapi/provider-upload-aws-s3",
       providerOptions: {
-        accessKeyId: env("WASABI_ACCESS_KEY_ID"),
-        secretAccessKey: env("WASABI_SECRET_ACCESS_KEY"),
-        region: env("WASABI_REGION"),
-        endpoint: "https://s3.eu-west-1.wasabisys.com", // Wasabi's S3 API endpoint
-        params: {
-          Bucket: env("WASABI_BUCKET_NAME"),
+        s3Options: {
+          accessKeyId: env("WASABI_ACCESS_KEY_ID"),
+          secretAccessKey: env("WASABI_SECRET_ACCESS_KEY"),
+          region: env("WASABI_REGION"),
+          endpoint: "https://s3.eu-west-1.wasabisys.com", // Wasabi's S3 API endpoint
+          params: {
+            Bucket: env("WASABI_BUCKET_NAME"),
+          },
         },
         baseUrl: env("WASABI_CDN_URL"),
         basePath: "",
