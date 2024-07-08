@@ -9,6 +9,7 @@ module.exports = ({ env }) => ({
           region: env("WASABI_REGION"),
           endpoint: "https://s3.eu-west-1.wasabisys.com", // Wasabi's S3 API endpoint
           params: {
+            ACL: env("public-read"),
             Bucket: env("WASABI_BUCKET_NAME"),
           },
         },
