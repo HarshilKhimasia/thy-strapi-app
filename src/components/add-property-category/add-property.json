@@ -13,41 +13,16 @@
     "PropertyDescription": {
       "type": "text"
     },
-    "SelectPropertyType": {
-      "type": "enumeration",
-      "enum": [
-        "Room",
-        "Studio flat",
-        "Flat",
-        "Moissanite ",
-        "Semidetached house",
-        "Detached house",
-        "Terraced house",
-        "End of terrace house",
-        "Cottage ",
-        "Bungalow",
-        "Manson "
-      ]
-    },
     "Department": {
       "type": "enumeration",
       "enum": [
         "Lettings ",
         "Sales",
         "Commercial ",
-        "Commercial Sale ",
-        "Investment "
-      ]
-    },
-    "Status": {
-      "type": "enumeration",
-      "enum": [
-        "New  ",
-        "New instructions",
-        "Reduced ",
-        "Under offer ",
-        "Sold ",
-        "STC"
+        "Investment",
+        "Development ",
+        "Other",
+        "Data not available  "
       ]
     },
     "Price": {
@@ -61,7 +36,12 @@
         "C",
         "D",
         "E",
-        "F"
+        "F",
+        "G",
+        "H",
+        "I",
+        "Other",
+        "Data not available"
       ]
     },
     "Media": {
@@ -99,9 +79,6 @@
     "sizeInSqMtr": {
       "type": "string"
     },
-    "Receptions": {
-      "type": "string"
-    },
     "Bedrooms": {
       "type": "string"
     },
@@ -116,7 +93,10 @@
       "enum": [
         "Yes",
         "No",
-        "Free Off street parking"
+        "Free Off street parking",
+        "Permit holders parking",
+        "Other",
+        "Data not available"
       ]
     },
     "YearBuilt": {
@@ -126,37 +106,51 @@
       "type": "date"
     },
     "Basement": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No",
+        "Other",
+        "Data not available"
+      ]
     },
     "Loft": {
       "type": "enumeration",
       "enum": [
         "Yes",
-        "No"
+        "No",
+        "Other",
+        "Data not available"
       ]
     },
     "Kitchen": {
       "type": "enumeration",
       "enum": [
         "Separate kitchen",
-        "Open Plan Kitchen",
-        "Kitchen and Dinner"
+        "Kitchen diner ",
+        "Open plan kitchen",
+        "Data not available ",
+        "Other "
       ]
     },
     "PropertyType": {
       "type": "enumeration",
       "enum": [
-        "Semi detached",
-        "Detached",
-        "Terraced",
-        "End of Terrace"
+        "Room",
+        "Studio flat",
+        "Flat",
+        "Moissanite ",
+        "Semidetached house",
+        "Detached house",
+        "Terraced house",
+        "End of terrace",
+        "Cottage ",
+        "Bungalow",
+        "Manson ",
+        "HMO",
+        "Other ",
+        "Custom Build"
       ]
-    },
-    "FloorNumber": {
-      "type": "integer"
-    },
-    "EPCRating": {
-      "type": "string"
     },
     "EnergyIndexKwh": {
       "type": "string"
@@ -179,6 +173,63 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "Status": {
+      "type": "string"
+    },
+    "LivingRooms": {
+      "type": "string"
+    },
+    "Suit": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No",
+        "Other",
+        "Data not available"
+      ]
+    },
+    "FloorNumber": {
+      "type": "string"
+    },
+    "EPCRating": {
+      "type": "enumeration",
+      "enum": [
+        "A plus plus",
+        "A plus",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "Other",
+        "Data not available "
+      ]
+    },
+    "OfferedAs": {
+      "type": "enumeration",
+      "enum": [
+        "Fully Furnished",
+        "Unfurnished",
+        "Part Furnished",
+        "White Goods Only",
+        "Negotiable",
+        "Tenant’s Choice",
+        "Other",
+        "Data not available"
+      ]
+    },
+    "LetType": {
+      "type": "enumeration",
+      "enum": [
+        "Short let",
+        "Long let",
+        "Six months",
+        "Twelve months",
+        "Negotiable ",
+        "Other"
+      ]
     }
   }
 }

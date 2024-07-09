@@ -10,29 +10,33 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
   attributes: {
     Title: Attribute.String;
     PropertyDescription: Attribute.Text;
-    SelectPropertyType: Attribute.Enumeration<
+    Department: Attribute.Enumeration<
       [
-        'Room',
-        'Studio flat',
-        'Flat',
-        'Moissanite ',
-        'Semidetached house',
-        'Detached house',
-        'Terraced house',
-        'End of terrace house',
-        'Cottage ',
-        'Bungalow',
-        'Manson '
+        'Lettings ',
+        'Sales',
+        'Commercial ',
+        'Investment',
+        'Development ',
+        'Other',
+        'Data not available  '
       ]
     >;
-    Department: Attribute.Enumeration<
-      ['Lettings ', 'Sales', 'Commercial ', 'Commercial Sale ', 'Investment ']
-    >;
-    Status: Attribute.Enumeration<
-      ['New  ', 'New instructions', 'Reduced ', 'Under offer ', 'Sold ', 'STC']
-    >;
     Price: Attribute.String;
-    CouncilTaxBand: Attribute.Enumeration<['A', 'B', 'C', 'D', 'E', 'F']>;
+    CouncilTaxBand: Attribute.Enumeration<
+      [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'G',
+        'H',
+        'I',
+        'Other',
+        'Data not available'
+      ]
+    >;
     Media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     DoorNumber: Attribute.String;
     StreetName: Attribute.String;
@@ -42,25 +46,52 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
     Latitude: Attribute.String;
     Longitude: Attribute.String;
     sizeInSqMtr: Attribute.String;
-    Receptions: Attribute.String;
     Bedrooms: Attribute.String;
     Bathrooms: Attribute.String;
     Garages: Attribute.String;
     OffStreetParking: Attribute.Enumeration<
-      ['Yes', 'No', 'Free Off street parking']
+      [
+        'Yes',
+        'No',
+        'Free Off street parking',
+        'Permit holders parking',
+        'Other',
+        'Data not available'
+      ]
     >;
     YearBuilt: Attribute.String;
     AvailableFrom: Attribute.Date;
-    Basement: Attribute.String;
-    Loft: Attribute.Enumeration<['Yes', 'No']>;
+    Basement: Attribute.Enumeration<
+      ['Yes', 'No', 'Other', 'Data not available']
+    >;
+    Loft: Attribute.Enumeration<['Yes', 'No', 'Other', 'Data not available']>;
     Kitchen: Attribute.Enumeration<
-      ['Separate kitchen', 'Open Plan Kitchen', 'Kitchen and Dinner']
+      [
+        'Separate kitchen',
+        'Kitchen diner ',
+        'Open plan kitchen',
+        'Data not available ',
+        'Other '
+      ]
     >;
     PropertyType: Attribute.Enumeration<
-      ['Semi detached', 'Detached', 'Terraced', 'End of Terrace']
+      [
+        'Room',
+        'Studio flat',
+        'Flat',
+        'Moissanite ',
+        'Semidetached house',
+        'Detached house',
+        'Terraced house',
+        'End of terrace',
+        'Cottage ',
+        'Bungalow',
+        'Manson ',
+        'HMO',
+        'Other ',
+        'Custom Build'
+      ]
     >;
-    FloorNumber: Attribute.Integer;
-    EPCRating: Attribute.String;
     EnergyIndexKwh: Attribute.String;
     OwnerAgentNots: Attribute.Text;
     Amenities: Attribute.Blocks;
@@ -69,6 +100,46 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
     featuredProperty: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
+    Status: Attribute.String;
+    LivingRooms: Attribute.String;
+    Suit: Attribute.Enumeration<['Yes', 'No', 'Other', 'Data not available']>;
+    FloorNumber: Attribute.String;
+    EPCRating: Attribute.Enumeration<
+      [
+        'A plus plus',
+        'A plus',
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'Other',
+        'Data not available '
+      ]
+    >;
+    OfferedAs: Attribute.Enumeration<
+      [
+        'Fully Furnished',
+        'Unfurnished',
+        'Part Furnished',
+        'White Goods Only',
+        'Negotiable',
+        'Tenant\u2019s Choice',
+        'Other',
+        'Data not available'
+      ]
+    >;
+    LetType: Attribute.Enumeration<
+      [
+        'Short let',
+        'Long let',
+        'Six months',
+        'Twelve months',
+        'Negotiable ',
+        'Other'
+      ]
+    >;
   };
 }
 
