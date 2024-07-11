@@ -140,6 +140,7 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other'
       ]
     >;
+    MaxDeposit: Attribute.String;
   };
 }
 
