@@ -827,6 +827,7 @@ export interface ApiAddNewPropertyCommercialForRentAddNewPropertyCommercialForRe
     singularName: 'add-new-property-commercial-for-rent';
     pluralName: 'add-new-property-commercial-for-rents';
     displayName: 'Add New Property (Commercial For Rent)';
+    description: '';
   };
   options: {
     draftAndPublish: true;

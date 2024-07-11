@@ -45,7 +45,7 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
     PostCode: Attribute.String;
     Latitude: Attribute.String;
     Longitude: Attribute.String;
-    sizeInSqMtr: Attribute.String;
+    sizeInSqFt: Attribute.String;
     Bedrooms: Attribute.String;
     Bathrooms: Attribute.String;
     Garages: Attribute.String;
