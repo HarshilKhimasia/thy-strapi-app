@@ -76,7 +76,7 @@
     "Longitude": {
       "type": "string"
     },
-    "sizeInSqFt": {
+    "sizeInSqMtr": {
       "type": "string"
     },
     "Bedrooms": {
