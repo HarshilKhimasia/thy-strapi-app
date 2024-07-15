@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advance_filter_locations",
+  "info": {
+    "singularName": "advance-filter-location",
+    "pluralName": "advance-filter-locations",
+    "displayName": "Advance Filter Location"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Location": {
+      "type": "string"
+    }
+  }
+}

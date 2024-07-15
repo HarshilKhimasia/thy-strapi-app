@@ -1189,6 +1189,37 @@ export interface ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale
   };
 }
 
+export interface ApiAdvanceFilterLocationAdvanceFilterLocation
+  extends Schema.CollectionType {
+  collectionName: 'advance_filter_locations';
+  info: {
+    singularName: 'advance-filter-location';
+    pluralName: 'advance-filter-locations';
+    displayName: 'Advance Filter Location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Location: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::advance-filter-location.advance-filter-location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::advance-filter-location.advance-filter-location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAwardMainImageAwardMainImage extends Schema.SingleType {
   collectionName: 'award_main_images';
   info: {
@@ -1922,6 +1953,7 @@ declare module '@strapi/types' {
       'api::add-new-property-house-for-sale.add-new-property-house-for-sale': ApiAddNewPropertyHouseForSaleAddNewPropertyHouseForSale;
       'api::add-new-property-office-for-rent.add-new-property-office-for-rent': ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent;
       'api::add-new-property-office-for-sale.add-new-property-office-for-sale': ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale;
+      'api::advance-filter-location.advance-filter-location': ApiAdvanceFilterLocationAdvanceFilterLocation;
       'api::award-main-image.award-main-image': ApiAwardMainImageAwardMainImage;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
       'api::compare-page.compare-page': ApiComparePageComparePage;
