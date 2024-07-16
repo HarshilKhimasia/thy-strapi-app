@@ -1788,6 +1788,38 @@ export interface ApiMissionSectionHeadingMissionSectionHeading
   };
 }
 
+export interface ApiNearbySimilarPropertyNearbySimilarProperty
+  extends Schema.SingleType {
+  collectionName: 'nearby_similar_properties';
+  info: {
+    singularName: 'nearby-similar-property';
+    pluralName: 'nearby-similar-properties';
+    displayName: 'Nearby Similar Property';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    subHeading: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::nearby-similar-property.nearby-similar-property',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::nearby-similar-property.nearby-similar-property',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership
   extends Schema.SingleType {
   collectionName: 'our_accreditations_and_memberships';
@@ -1970,6 +2002,7 @@ declare module '@strapi/types' {
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
       'api::mission-section-detail.mission-section-detail': ApiMissionSectionDetailMissionSectionDetail;
       'api::mission-section-heading.mission-section-heading': ApiMissionSectionHeadingMissionSectionHeading;
+      'api::nearby-similar-property.nearby-similar-property': ApiNearbySimilarPropertyNearbySimilarProperty;
       'api::our-accreditations-and-membership.our-accreditations-and-membership': ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership;
       'api::right-selling-section.right-selling-section': ApiRightSellingSectionRightSellingSection;
       'api::right-selling-section-detail.right-selling-section-detail': ApiRightSellingSectionDetailRightSellingSectionDetail;

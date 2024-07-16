@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "nearby_similar_properties",
+  "info": {
+    "singularName": "nearby-similar-property",
+    "pluralName": "nearby-similar-properties",
+    "displayName": "Nearby Similar Property"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    }
+  }
+}
