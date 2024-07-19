@@ -49,10 +49,7 @@
       "multiple": true,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "DoorNumber": {
@@ -156,7 +153,8 @@
       "type": "string"
     },
     "OwnerAgentNots": {
-      "type": "text"
+      "type": "text",
+      "private": true
     },
     "Amenities": {
       "type": "blocks"
@@ -232,6 +230,9 @@
       ]
     },
     "MaxDeposit": {
+      "type": "string"
+    },
+    "VideoLink": {
       "type": "string"
     }
   }

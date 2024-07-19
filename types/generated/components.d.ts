@@ -37,7 +37,7 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Data not available'
       ]
     >;
-    Media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    Media: Attribute.Media<'images', true>;
     DoorNumber: Attribute.String;
     StreetName: Attribute.String;
     SecondLineOfAddress: Attribute.String;
@@ -93,7 +93,7 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
       ]
     >;
     EnergyIndexKwh: Attribute.String;
-    OwnerAgentNots: Attribute.Text;
+    OwnerAgentNots: Attribute.Text & Attribute.Private;
     Amenities: Attribute.Blocks;
     forRent: Attribute.Boolean & Attribute.Required;
     forSale: Attribute.Boolean & Attribute.Required;
@@ -141,6 +141,7 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
       ]
     >;
     MaxDeposit: Attribute.String;
+    VideoLink: Attribute.String;
   };
 }
 
