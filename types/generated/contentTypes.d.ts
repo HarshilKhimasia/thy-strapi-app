@@ -1628,6 +1628,41 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiGetMoreInformationGetMoreInformation
+  extends Schema.SingleType {
+  collectionName: 'get_more_informations';
+  info: {
+    singularName: 'get-more-information';
+    pluralName: 'get-more-informations';
+    displayName: 'Get More Information';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Name: Attribute.String;
+    PhoneNumber: Attribute.String;
+    FormButtonText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::get-more-information.get-more-information',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::get-more-information.get-more-information',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Schema.SingleType {
   collectionName: 'home_pages';
   info: {
@@ -1954,6 +1989,38 @@ export interface ApiRightSellingSectionDetailRightSellingSectionDetail
   };
 }
 
+export interface ApiScheduleATourScheduleATour extends Schema.SingleType {
+  collectionName: 'schedule_a_tours';
+  info: {
+    singularName: 'schedule-a-tour';
+    pluralName: 'schedule-a-tours';
+    displayName: 'Schedule a tour';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String;
+    subHeading: Attribute.String;
+    buttonText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::schedule-a-tour.schedule-a-tour',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::schedule-a-tour.schedule-a-tour',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiVisitOurOfficeVisitOurOffice extends Schema.CollectionType {
   collectionName: 'visit_our_offices';
   info: {
@@ -2029,6 +2096,7 @@ declare module '@strapi/types' {
       'api::faq-page.faq-page': ApiFaqPageFaqPage;
       'api::faq-section.faq-section': ApiFaqSectionFaqSection;
       'api::footer.footer': ApiFooterFooter;
+      'api::get-more-information.get-more-information': ApiGetMoreInformationGetMoreInformation;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::inquiry-form.inquiry-form': ApiInquiryFormInquiryForm;
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
@@ -2038,6 +2106,7 @@ declare module '@strapi/types' {
       'api::our-accreditations-and-membership.our-accreditations-and-membership': ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership;
       'api::right-selling-section.right-selling-section': ApiRightSellingSectionRightSellingSection;
       'api::right-selling-section-detail.right-selling-section-detail': ApiRightSellingSectionDetailRightSellingSectionDetail;
+      'api::schedule-a-tour.schedule-a-tour': ApiScheduleATourScheduleATour;
       'api::visit-our-office.visit-our-office': ApiVisitOurOfficeVisitOurOffice;
     }
   }

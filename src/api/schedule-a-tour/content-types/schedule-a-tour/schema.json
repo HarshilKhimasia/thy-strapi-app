@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "schedule_a_tours",
+  "info": {
+    "singularName": "schedule-a-tour",
+    "pluralName": "schedule-a-tours",
+    "displayName": "Schedule a tour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}
