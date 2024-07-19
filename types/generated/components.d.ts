@@ -230,6 +230,24 @@ export interface FooterCategorySocialIcons extends Schema.Component {
   };
 }
 
+export interface MetaDataMetaDataComponent extends Schema.Component {
+  collectionName: 'components_meta_data_meta_data_components';
+  info: {
+    displayName: 'Meta Data Component';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    canonical: Attribute.String;
+    openGraphImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    twitterHandle: Attribute.String;
+    twitterUsername: Attribute.String;
+    seoAuthor: Attribute.String;
+    seoKeywords: Attribute.Blocks;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -241,6 +259,7 @@ declare module '@strapi/types' {
       'footer-category.popular-search-links-list': FooterCategoryPopularSearchLinksList;
       'footer-category.quick-links-list': FooterCategoryQuickLinksList;
       'footer-category.social-icons': FooterCategorySocialIcons;
+      'meta-data.meta-data-component': MetaDataMetaDataComponent;
     }
   }
 }

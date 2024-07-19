@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "policy_page_metadatas",
+  "info": {
+    "singularName": "policy-page-metadata",
+    "pluralName": "policy-page-metadatas",
+    "displayName": "Policy Page Metadata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageMetaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-data.meta-data-component"
+    }
+  }
+}

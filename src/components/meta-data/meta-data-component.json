@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_meta_data_meta_data_components",
+  "info": {
+    "displayName": "Meta Data Component",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "openGraphImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "twitterHandle": {
+      "type": "string"
+    },
+    "twitterUsername": {
+      "type": "string"
+    },
+    "seoAuthor": {
+      "type": "string"
+    },
+    "seoKeywords": {
+      "type": "blocks"
+    }
+  }
+}

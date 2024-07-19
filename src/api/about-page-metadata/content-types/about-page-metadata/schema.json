@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_page_metadatas",
+  "info": {
+    "singularName": "about-page-metadata",
+    "pluralName": "about-page-metadatas",
+    "displayName": "About Page Metadata",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageMetaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-data.meta-data-component"
+    }
+  }
+}

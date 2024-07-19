@@ -820,6 +820,38 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
   };
 }
 
+export interface ApiAboutPageMetadataAboutPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'about_page_metadatas';
+  info: {
+    singularName: 'about-page-metadata';
+    pluralName: 'about-page-metadatas';
+    displayName: 'About Page Metadata';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-page-metadata.about-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-page-metadata.about-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAddNewPropertyCommercialForRentAddNewPropertyCommercialForRent
   extends Schema.CollectionType {
   collectionName: 'add_new_property_commercial_for_rents';
@@ -1349,6 +1381,37 @@ export interface ApiComparePageComparePage extends Schema.SingleType {
   };
 }
 
+export interface ApiComparePageMetadataComparePageMetadata
+  extends Schema.SingleType {
+  collectionName: 'compare_page_metadatas';
+  info: {
+    singularName: 'compare-page-metadata';
+    pluralName: 'compare-page-metadatas';
+    displayName: 'Compare Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::compare-page-metadata.compare-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::compare-page-metadata.compare-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactPageFormContactPageForm
   extends Schema.CollectionType {
   collectionName: 'contact_page_forms';
@@ -1408,6 +1471,37 @@ export interface ApiContactPageIntroContactPageIntro extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::contact-page-intro.contact-page-intro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactPageMetadataContactPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'contact_page_metadatas';
+  info: {
+    singularName: 'contact-page-metadata';
+    pluralName: 'contact-page-metadatas';
+    displayName: 'Contact Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page-metadata.contact-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page-metadata.contact-page-metadata',
       'oneToOne',
       'admin::user'
     > &
@@ -1538,6 +1632,36 @@ export interface ApiFaqPageFaqPage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::faq-page.faq-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqPageMetadataFaqPageMetadata extends Schema.SingleType {
+  collectionName: 'faq_page_metadatas';
+  info: {
+    singularName: 'faq-page-metadata';
+    pluralName: 'faq-page-metadatas';
+    displayName: 'FAQ Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-page-metadata.faq-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-page-metadata.faq-page-metadata',
       'oneToOne',
       'admin::user'
     > &
@@ -1702,6 +1826,67 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageMetadataHomePageMetadata extends Schema.SingleType {
+  collectionName: 'home_page_metadatas';
+  info: {
+    singularName: 'home-page-metadata';
+    pluralName: 'home-page-metadatas';
+    displayName: 'Home Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-metadata.home-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-metadata.home-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiIndividualPropertyPageMetadataIndividualPropertyPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'individual_property_page_metadatas';
+  info: {
+    singularName: 'individual-property-page-metadata';
+    pluralName: 'individual-property-page-metadatas';
+    displayName: 'Individual Property Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::individual-property-page-metadata.individual-property-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::individual-property-page-metadata.individual-property-page-metadata',
       'oneToOne',
       'admin::user'
     > &
@@ -1922,6 +2107,68 @@ export interface ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership
   };
 }
 
+export interface ApiPolicyPageMetadataPolicyPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'policy_page_metadatas';
+  info: {
+    singularName: 'policy-page-metadata';
+    pluralName: 'policy-page-metadatas';
+    displayName: 'Policy Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::policy-page-metadata.policy-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::policy-page-metadata.policy-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPropertiesListingPageMetadataPropertiesListingPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'properties_listing_page_metadatas';
+  info: {
+    singularName: 'properties-listing-page-metadata';
+    pluralName: 'properties-listing-page-metadatas';
+    displayName: 'Properties Listing Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::properties-listing-page-metadata.properties-listing-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::properties-listing-page-metadata.properties-listing-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRightSellingSectionRightSellingSection
   extends Schema.SingleType {
   collectionName: 'right_selling_sections';
@@ -2075,6 +2322,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::about-page-metadata.about-page-metadata': ApiAboutPageMetadataAboutPageMetadata;
       'api::add-new-property-commercial-for-rent.add-new-property-commercial-for-rent': ApiAddNewPropertyCommercialForRentAddNewPropertyCommercialForRent;
       'api::add-new-property-commercial-for-sale.add-new-property-commercial-for-sale': ApiAddNewPropertyCommercialForSaleAddNewPropertyCommercialForSale;
       'api::add-new-property-flat-for-rent.add-new-property-flat-for-rent': ApiAddNewPropertyFlatForRentAddNewPropertyFlatForRent;
@@ -2088,22 +2336,29 @@ declare module '@strapi/types' {
       'api::award-main-image.award-main-image': ApiAwardMainImageAwardMainImage;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
       'api::compare-page.compare-page': ApiComparePageComparePage;
+      'api::compare-page-metadata.compare-page-metadata': ApiComparePageMetadataComparePageMetadata;
       'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
       'api::contact-page-intro.contact-page-intro': ApiContactPageIntroContactPageIntro;
+      'api::contact-page-metadata.contact-page-metadata': ApiContactPageMetadataContactPageMetadata;
       'api::cta-section.cta-section': ApiCtaSectionCtaSection;
       'api::exclusive-agents-section.exclusive-agents-section': ApiExclusiveAgentsSectionExclusiveAgentsSection;
       'api::exclusive-agents-section-carousel.exclusive-agents-section-carousel': ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel;
       'api::faq-page.faq-page': ApiFaqPageFaqPage;
+      'api::faq-page-metadata.faq-page-metadata': ApiFaqPageMetadataFaqPageMetadata;
       'api::faq-section.faq-section': ApiFaqSectionFaqSection;
       'api::footer.footer': ApiFooterFooter;
       'api::get-more-information.get-more-information': ApiGetMoreInformationGetMoreInformation;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::home-page-metadata.home-page-metadata': ApiHomePageMetadataHomePageMetadata;
+      'api::individual-property-page-metadata.individual-property-page-metadata': ApiIndividualPropertyPageMetadataIndividualPropertyPageMetadata;
       'api::inquiry-form.inquiry-form': ApiInquiryFormInquiryForm;
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
       'api::mission-section-detail.mission-section-detail': ApiMissionSectionDetailMissionSectionDetail;
       'api::mission-section-heading.mission-section-heading': ApiMissionSectionHeadingMissionSectionHeading;
       'api::nearby-similar-property.nearby-similar-property': ApiNearbySimilarPropertyNearbySimilarProperty;
       'api::our-accreditations-and-membership.our-accreditations-and-membership': ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership;
+      'api::policy-page-metadata.policy-page-metadata': ApiPolicyPageMetadataPolicyPageMetadata;
+      'api::properties-listing-page-metadata.properties-listing-page-metadata': ApiPropertiesListingPageMetadataPropertiesListingPageMetadata;
       'api::right-selling-section.right-selling-section': ApiRightSellingSectionRightSellingSection;
       'api::right-selling-section-detail.right-selling-section-detail': ApiRightSellingSectionDetailRightSellingSectionDetail;
       'api::schedule-a-tour.schedule-a-tour': ApiScheduleATourScheduleATour;

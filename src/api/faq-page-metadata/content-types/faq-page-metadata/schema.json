@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "faq_page_metadatas",
+  "info": {
+    "singularName": "faq-page-metadata",
+    "pluralName": "faq-page-metadatas",
+    "displayName": "FAQ Page Metadata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageMetaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-data.meta-data-component"
+    }
+  }
+}
