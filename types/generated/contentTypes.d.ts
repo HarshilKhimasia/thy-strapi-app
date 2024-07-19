@@ -1220,6 +1220,37 @@ export interface ApiAdvanceFilterLocationAdvanceFilterLocation
   };
 }
 
+export interface ApiAllPolicyAllPolicy extends Schema.CollectionType {
+  collectionName: 'all_policies';
+  info: {
+    singularName: 'all-policy';
+    pluralName: 'all-policies';
+    displayName: 'All Policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    policyName: Attribute.String;
+    policyFile: Attribute.Media<'files'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::all-policy.all-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::all-policy.all-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAwardMainImageAwardMainImage extends Schema.SingleType {
   collectionName: 'award_main_images';
   info: {
@@ -1986,6 +2017,7 @@ declare module '@strapi/types' {
       'api::add-new-property-office-for-rent.add-new-property-office-for-rent': ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent;
       'api::add-new-property-office-for-sale.add-new-property-office-for-sale': ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale;
       'api::advance-filter-location.advance-filter-location': ApiAdvanceFilterLocationAdvanceFilterLocation;
+      'api::all-policy.all-policy': ApiAllPolicyAllPolicy;
       'api::award-main-image.award-main-image': ApiAwardMainImageAwardMainImage;
       'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
       'api::compare-page.compare-page': ApiComparePageComparePage;

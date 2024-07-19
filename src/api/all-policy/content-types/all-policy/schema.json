@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "all_policies",
+  "info": {
+    "singularName": "all-policy",
+    "pluralName": "all-policies",
+    "displayName": "All Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "policyName": {
+      "type": "string"
+    },
+    "policyFile": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
