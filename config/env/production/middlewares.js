@@ -15,7 +15,6 @@ module.exports = [
             "market-assets.strapi.io",
             "thy-properties.s3.eu-west-1.wasabisys.com", // Update with your Wasabi bucket URL
             "thy-properties.global.ssl.fastly.net", // Fastly CDN URL
-            "https://thy-test.global.ssl.fastly.net", // New Fastly CDN URL
           ],
           "media-src": [
             "'self'",
@@ -24,7 +23,6 @@ module.exports = [
             "market-assets.strapi.io",
             "thy-properties.s3.eu-west-1.wasabisys.com", // Update with your Wasabi bucket URL
             "thy-properties.global.ssl.fastly.net", // Fastly CDN URL
-            "https://thy-test.global.ssl.fastly.net", // New Fastly CDN URL
           ],
           upgradeInsecureRequests: null,
         },
