@@ -4,7 +4,8 @@
   "info": {
     "singularName": "get-more-information",
     "pluralName": "get-more-informations",
-    "displayName": "Get More Information"
+    "displayName": "Get More Information",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,26 +13,28 @@
   "pluginOptions": {},
   "attributes": {
     "Heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "Name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "PhoneNumber": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FormButtonText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

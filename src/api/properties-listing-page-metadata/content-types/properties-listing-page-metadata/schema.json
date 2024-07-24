@@ -4,7 +4,8 @@
   "info": {
     "singularName": "properties-listing-page-metadata",
     "pluralName": "properties-listing-page-metadatas",
-    "displayName": "Properties Listing Page Metadata"
+    "displayName": "Properties Listing Page Metadata",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,8 @@
     "PageMetaData": {
       "type": "component",
       "repeatable": false,
-      "component": "meta-data.meta-data-component"
+      "component": "meta-data.meta-data-component",
+      "required": true
     }
   }
 }

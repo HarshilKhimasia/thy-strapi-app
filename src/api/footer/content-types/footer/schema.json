@@ -15,70 +15,82 @@
     "footerLogo": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "AddressTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FullAddress": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "PhoneTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FullPhoneNumber": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FollowUsTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FooterSocialIconsZone": {
       "type": "dynamiczone",
       "components": [
         "footer-category.social-icons"
-      ]
+      ],
+      "required": true
     },
     "MonthlyNewsletterTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "PopularSearchZone": {
       "type": "dynamiczone",
       "components": [
         "footer-category.popular-search-links-list"
-      ]
+      ],
+      "required": true
     },
     "QuickLinksZone": {
       "type": "dynamiczone",
       "components": [
         "footer-category.quick-links-list"
-      ]
+      ],
+      "required": true
     },
     "DiscoverLinksZone": {
       "type": "dynamiczone",
       "components": [
         "footer-category.discover-links-list"
-      ]
+      ],
+      "required": true
     },
     "SendEmailTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FullSendEmail": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "PopularSearchTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "QuickLinksTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "DiscoverLinksTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

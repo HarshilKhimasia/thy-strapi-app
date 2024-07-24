@@ -4,7 +4,8 @@
   "info": {
     "singularName": "exclusive-agents-section",
     "pluralName": "exclusive-agents-sections",
-    "displayName": "Exclusive Agents Section"
+    "displayName": "Exclusive Agents Section",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subHeading": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

@@ -1,12 +1,14 @@
 {
   "collectionName": "components_contact_page_contact_page_form_field_components",
   "info": {
-    "displayName": "Contact Page Form Field Component"
+    "displayName": "Contact Page Form Field Component",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -2,16 +2,18 @@
   "collectionName": "components_add_property_category_add_properties",
   "info": {
     "displayName": "Add Property",
-    "icon": "stack",
+    "icon": "plus",
     "description": ""
   },
   "options": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "PropertyDescription": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "Department": {
       "type": "enumeration",
@@ -23,10 +25,12 @@
         "Development ",
         "Other",
         "Data not available  "
-      ]
+      ],
+      "required": true
     },
     "Price": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "CouncilTaxBand": {
       "type": "enumeration",
@@ -42,48 +46,60 @@
         "I",
         "Other",
         "Data not available"
-      ]
+      ],
+      "required": true
     },
     "Media": {
       "type": "media",
       "multiple": true,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
     },
     "DoorNumber": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "StreetName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "SecondLineOfAddress": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "TownOrCity": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "PostCode": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Latitude": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Longitude": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "sizeInSqMtr": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Bedrooms": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Bathrooms": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Garages": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "OffStreetParking": {
       "type": "enumeration",
@@ -94,13 +110,16 @@
         "Permit holders parking",
         "Other",
         "Data not available"
-      ]
+      ],
+      "required": true
     },
     "YearBuilt": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "AvailableFrom": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "Basement": {
       "type": "enumeration",
@@ -109,7 +128,8 @@
         "No",
         "Other",
         "Data not available"
-      ]
+      ],
+      "required": true
     },
     "Loft": {
       "type": "enumeration",
@@ -118,7 +138,8 @@
         "No",
         "Other",
         "Data not available"
-      ]
+      ],
+      "required": true
     },
     "Kitchen": {
       "type": "enumeration",
@@ -128,7 +149,8 @@
         "Open plan kitchen",
         "Data not available ",
         "Other "
-      ]
+      ],
+      "required": true
     },
     "PropertyType": {
       "type": "enumeration",
@@ -147,10 +169,12 @@
         "HMO",
         "Other ",
         "Custom Build"
-      ]
+      ],
+      "required": true
     },
     "EnergyIndexKwh": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "OwnerAgentNots": {
       "type": "text",
@@ -173,10 +197,12 @@
       "required": true
     },
     "Status": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "LivingRooms": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Suit": {
       "type": "enumeration",
@@ -185,10 +211,12 @@
         "No",
         "Other",
         "Data not available"
-      ]
+      ],
+      "required": true
     },
     "FloorNumber": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "EPCRating": {
       "type": "enumeration",
@@ -203,7 +231,8 @@
         "F",
         "Other",
         "Data not available "
-      ]
+      ],
+      "required": true
     },
     "OfferedAs": {
       "type": "enumeration",
@@ -216,7 +245,8 @@
         "Tenant’s Choice",
         "Other",
         "Data not available"
-      ]
+      ],
+      "required": true
     },
     "LetType": {
       "type": "enumeration",
@@ -227,7 +257,8 @@
         "Twelve months",
         "Negotiable ",
         "Other"
-      ]
+      ],
+      "required": true
     },
     "MaxDeposit": {
       "type": "string"

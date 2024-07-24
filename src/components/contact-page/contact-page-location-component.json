@@ -7,26 +7,28 @@
   "options": {},
   "attributes": {
     "City": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "address": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "phoneNumber": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "googleMapLink": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

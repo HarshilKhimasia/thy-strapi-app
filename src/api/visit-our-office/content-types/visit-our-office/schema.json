@@ -13,16 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subHeading": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "locationZone": {
       "type": "dynamiczone",
       "components": [
         "contact-page.contact-page-location-component"
-      ]
+      ],
+      "required": true
     }
   }
 }

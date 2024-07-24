@@ -4,7 +4,8 @@
   "info": {
     "singularName": "compare-page-metadata",
     "pluralName": "compare-page-metadatas",
-    "displayName": "Compare Page Metadata"
+    "displayName": "Compare Page Metadata",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,8 @@
     "PageMetaData": {
       "type": "component",
       "repeatable": false,
-      "component": "meta-data.meta-data-component"
+      "component": "meta-data.meta-data-component",
+      "required": true
     }
   }
 }

@@ -4,12 +4,12 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
   collectionName: 'components_add_property_category_add_properties';
   info: {
     displayName: 'Add Property';
-    icon: 'stack';
+    icon: 'plus';
     description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    PropertyDescription: Attribute.Text;
+    Title: Attribute.String & Attribute.Required;
+    PropertyDescription: Attribute.Text & Attribute.Required;
     Department: Attribute.Enumeration<
       [
         'Lettings ',
@@ -20,8 +20,9 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other',
         'Data not available  '
       ]
-    >;
-    Price: Attribute.String;
+    > &
+      Attribute.Required;
+    Price: Attribute.String & Attribute.Required;
     CouncilTaxBand: Attribute.Enumeration<
       [
         'A',
@@ -36,19 +37,20 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other',
         'Data not available'
       ]
-    >;
-    Media: Attribute.Media<'images', true>;
-    DoorNumber: Attribute.String;
-    StreetName: Attribute.String;
-    SecondLineOfAddress: Attribute.String;
-    TownOrCity: Attribute.String;
-    PostCode: Attribute.String;
-    Latitude: Attribute.String;
-    Longitude: Attribute.String;
-    sizeInSqMtr: Attribute.String;
-    Bedrooms: Attribute.String;
-    Bathrooms: Attribute.String;
-    Garages: Attribute.String;
+    > &
+      Attribute.Required;
+    Media: Attribute.Media<'images', true> & Attribute.Required;
+    DoorNumber: Attribute.String & Attribute.Required;
+    StreetName: Attribute.String & Attribute.Required;
+    SecondLineOfAddress: Attribute.String & Attribute.Required;
+    TownOrCity: Attribute.String & Attribute.Required;
+    PostCode: Attribute.String & Attribute.Required;
+    Latitude: Attribute.String & Attribute.Required;
+    Longitude: Attribute.String & Attribute.Required;
+    sizeInSqMtr: Attribute.String & Attribute.Required;
+    Bedrooms: Attribute.String & Attribute.Required;
+    Bathrooms: Attribute.String & Attribute.Required;
+    Garages: Attribute.String & Attribute.Required;
     OffStreetParking: Attribute.Enumeration<
       [
         'Yes',
@@ -58,13 +60,16 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other',
         'Data not available'
       ]
-    >;
-    YearBuilt: Attribute.String;
-    AvailableFrom: Attribute.Date;
+    > &
+      Attribute.Required;
+    YearBuilt: Attribute.String & Attribute.Required;
+    AvailableFrom: Attribute.Date & Attribute.Required;
     Basement: Attribute.Enumeration<
       ['Yes', 'No', 'Other', 'Data not available']
-    >;
-    Loft: Attribute.Enumeration<['Yes', 'No', 'Other', 'Data not available']>;
+    > &
+      Attribute.Required;
+    Loft: Attribute.Enumeration<['Yes', 'No', 'Other', 'Data not available']> &
+      Attribute.Required;
     Kitchen: Attribute.Enumeration<
       [
         'Separate kitchen',
@@ -73,7 +78,8 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Data not available ',
         'Other '
       ]
-    >;
+    > &
+      Attribute.Required;
     PropertyType: Attribute.Enumeration<
       [
         'Room',
@@ -91,8 +97,9 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other ',
         'Custom Build'
       ]
-    >;
-    EnergyIndexKwh: Attribute.String;
+    > &
+      Attribute.Required;
+    EnergyIndexKwh: Attribute.String & Attribute.Required;
     OwnerAgentNots: Attribute.Text & Attribute.Private;
     Amenities: Attribute.Blocks;
     forRent: Attribute.Boolean & Attribute.Required;
@@ -100,10 +107,11 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
     featuredProperty: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    Status: Attribute.String;
-    LivingRooms: Attribute.String;
-    Suit: Attribute.Enumeration<['Yes', 'No', 'Other', 'Data not available']>;
-    FloorNumber: Attribute.String;
+    Status: Attribute.String & Attribute.Required;
+    LivingRooms: Attribute.String & Attribute.Required;
+    Suit: Attribute.Enumeration<['Yes', 'No', 'Other', 'Data not available']> &
+      Attribute.Required;
+    FloorNumber: Attribute.String & Attribute.Required;
     EPCRating: Attribute.Enumeration<
       [
         'A plus plus',
@@ -117,7 +125,8 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other',
         'Data not available '
       ]
-    >;
+    > &
+      Attribute.Required;
     OfferedAs: Attribute.Enumeration<
       [
         'Fully Furnished',
@@ -129,7 +138,8 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Other',
         'Data not available'
       ]
-    >;
+    > &
+      Attribute.Required;
     LetType: Attribute.Enumeration<
       [
         'Short let',
@@ -139,7 +149,8 @@ export interface AddPropertyCategoryAddProperty extends Schema.Component {
         'Negotiable ',
         'Other'
       ]
-    >;
+    > &
+      Attribute.Required;
     MaxDeposit: Attribute.String;
     VideoLink: Attribute.String;
   };
@@ -150,9 +161,10 @@ export interface ContactPageContactPageFormFieldComponent
   collectionName: 'components_contact_page_contact_page_form_field_components';
   info: {
     displayName: 'Contact Page Form Field Component';
+    description: '';
   };
   attributes: {
-    title: Attribute.String;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
@@ -164,11 +176,11 @@ export interface ContactPageContactPageLocationComponent
     description: '';
   };
   attributes: {
-    City: Attribute.String;
-    address: Attribute.Text;
-    phoneNumber: Attribute.String;
-    googleMapLink: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    City: Attribute.String & Attribute.Required;
+    address: Attribute.Text & Attribute.Required;
+    phoneNumber: Attribute.String & Attribute.Required;
+    googleMapLink: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -176,10 +188,11 @@ export interface FaqQuestionAnswerComponent extends Schema.Component {
   collectionName: 'components_faq_question_answer_components';
   info: {
     displayName: 'Question Answer Component';
+    description: '';
   };
   attributes: {
-    question: Attribute.String;
-    answer: Attribute.Text;
+    question: Attribute.String & Attribute.Required;
+    answer: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -190,8 +203,8 @@ export interface FooterCategoryDiscoverLinksList extends Schema.Component {
     description: '';
   };
   attributes: {
-    linkListItem: Attribute.String;
-    link: Attribute.String;
+    linkListItem: Attribute.String & Attribute.Required;
+    link: Attribute.String & Attribute.Required;
   };
 }
 
@@ -202,8 +215,8 @@ export interface FooterCategoryPopularSearchLinksList extends Schema.Component {
     description: '';
   };
   attributes: {
-    linkListItem: Attribute.String;
-    link: Attribute.String;
+    linkListItem: Attribute.String & Attribute.Required;
+    link: Attribute.String & Attribute.Required;
   };
 }
 
@@ -214,8 +227,8 @@ export interface FooterCategoryQuickLinksList extends Schema.Component {
     description: '';
   };
   attributes: {
-    linkListItem: Attribute.String;
-    link: Attribute.String;
+    linkListItem: Attribute.String & Attribute.Required;
+    link: Attribute.String & Attribute.Required;
   };
 }
 
@@ -223,10 +236,11 @@ export interface FooterCategorySocialIcons extends Schema.Component {
   collectionName: 'components_footer_category_social_icons';
   info: {
     displayName: 'Social Icons';
+    description: '';
   };
   attributes: {
-    socialLink: Attribute.String;
-    socialIconImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    socialLink: Attribute.String & Attribute.Required;
+    socialIconImage: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -237,14 +251,14 @@ export interface MetaDataMetaDataComponent extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    canonical: Attribute.String;
-    openGraphImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    twitterHandle: Attribute.String;
-    twitterUsername: Attribute.String;
-    seoAuthor: Attribute.String;
-    seoKeywords: Attribute.Blocks;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    canonical: Attribute.String & Attribute.Required;
+    openGraphImage: Attribute.Media<'images'> & Attribute.Required;
+    twitterHandle: Attribute.String & Attribute.Required;
+    twitterUsername: Attribute.String & Attribute.Required;
+    seoAuthor: Attribute.String & Attribute.Required;
+    seoKeywords: Attribute.Blocks & Attribute.Required;
   };
 }
 

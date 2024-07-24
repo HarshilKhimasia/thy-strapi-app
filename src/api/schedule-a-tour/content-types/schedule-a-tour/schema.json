@@ -4,7 +4,8 @@
   "info": {
     "singularName": "schedule-a-tour",
     "pluralName": "schedule-a-tours",
-    "displayName": "Schedule a tour"
+    "displayName": "Schedule a tour",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "Heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "buttonText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

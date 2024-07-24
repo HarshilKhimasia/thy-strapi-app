@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact-page-intro",
     "pluralName": "contact-page-intros",
-    "displayName": "Contact Page Intro"
+    "displayName": "Contact Page Intro",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "para": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

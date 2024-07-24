@@ -13,48 +13,61 @@
   "pluginOptions": {},
   "attributes": {
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "selectdepartmentHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "titleTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "FirstNameTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "MiddleNameTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "SurnameTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "EmailTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "PhoneTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "contactinOnBehalfTitle": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "preferredMethodTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "messageTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "formButtontext": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "formMainImage": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -63,13 +76,16 @@
       ]
     },
     "selectDepratmentList": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "TitleList": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "preferredMethodList": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     }
   }
 }

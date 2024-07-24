@@ -4,7 +4,8 @@
   "info": {
     "singularName": "all-policy",
     "pluralName": "all-policies",
-    "displayName": "All Policy"
+    "displayName": "All Policy",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "policyName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "policyFile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

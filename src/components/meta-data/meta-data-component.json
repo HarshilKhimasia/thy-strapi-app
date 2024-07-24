@@ -7,36 +7,40 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "canonical": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "openGraphImage": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "twitterHandle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "twitterUsername": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "seoAuthor": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "seoKeywords": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     }
   }
 }

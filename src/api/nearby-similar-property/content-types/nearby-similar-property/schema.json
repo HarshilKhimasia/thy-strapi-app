@@ -4,7 +4,8 @@
   "info": {
     "singularName": "nearby-similar-property",
     "pluralName": "nearby-similar-properties",
-    "displayName": "Nearby Similar Property"
+    "displayName": "Nearby Similar Property",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "Heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subHeading": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

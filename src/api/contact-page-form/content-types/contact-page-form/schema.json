@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact-page-form",
     "pluralName": "contact-page-forms",
-    "displayName": "Contact Page Form"
+    "displayName": "Contact Page Form",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,16 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "formHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "fieldZone": {
       "type": "dynamiczone",
       "components": [
         "contact-page.contact-page-form-field-component"
-      ]
+      ],
+      "required": true
     },
     "formButtonText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

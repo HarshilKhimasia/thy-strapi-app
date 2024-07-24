@@ -4,7 +4,8 @@
   "info": {
     "singularName": "our-accreditations-and-membership",
     "pluralName": "our-accreditations-and-memberships",
-    "displayName": "Our accreditations & membership"
+    "displayName": "Our accreditations & membership",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,20 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "Heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subHeading": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "partnerImages": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": true
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

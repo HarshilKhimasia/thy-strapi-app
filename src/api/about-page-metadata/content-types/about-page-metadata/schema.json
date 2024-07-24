@@ -15,7 +15,8 @@
     "PageMetaData": {
       "type": "component",
       "repeatable": false,
-      "component": "meta-data.meta-data-component"
+      "component": "meta-data.meta-data-component",
+      "required": true
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "mission-section-heading",
     "pluralName": "mission-section-headings",
-    "displayName": "Mission Section Heading"
+    "displayName": "Mission Section Heading",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

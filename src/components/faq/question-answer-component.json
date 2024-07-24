@@ -1,15 +1,18 @@
 {
   "collectionName": "components_faq_question_answer_components",
   "info": {
-    "displayName": "Question Answer Component"
+    "displayName": "Question Answer Component",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "question": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "answer": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

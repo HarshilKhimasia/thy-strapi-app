@@ -4,7 +4,8 @@
   "info": {
     "singularName": "advance-filter-location",
     "pluralName": "advance-filter-locations",
-    "displayName": "Advance Filter Location"
+    "displayName": "Advance Filter Location",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "Location": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

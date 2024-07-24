@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "missionPara": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "isHeading": {
       "type": "boolean",

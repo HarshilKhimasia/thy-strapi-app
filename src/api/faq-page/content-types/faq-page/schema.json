@@ -4,7 +4,8 @@
   "info": {
     "singularName": "faq-page",
     "pluralName": "faq-pages",
-    "displayName": "FAQ Page"
+    "displayName": "FAQ Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "pageHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

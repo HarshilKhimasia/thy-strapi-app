@@ -4,7 +4,8 @@
   "info": {
     "singularName": "add-new-property-house-for-sale",
     "pluralName": "add-new-property-house-for-sales",
-    "displayName": "Add New Property (House For Sale)"
+    "displayName": "Add New Property (House For Sale)",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,7 +23,8 @@
     "AddingZone": {
       "type": "component",
       "repeatable": false,
-      "component": "add-property-category.add-property"
+      "component": "add-property-category.add-property",
+      "required": true
     }
   }
 }

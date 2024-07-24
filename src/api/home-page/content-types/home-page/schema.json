@@ -14,67 +14,67 @@
   "attributes": {
     "heroSectionHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "featuredSectionHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "featuredSectionSubHeading": {
       "type": "text",
-      "required": false
+      "required": true
     },
     "discoverPopularPropertiesSectionHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "discoverPopularPropertiesSectionSubHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "experienceSectionHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "experienceSectionSubHeading": {
       "type": "text",
-      "required": false
+      "required": true
     },
     "experienceSectionButtonText": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "ListingforsaleHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "listingforsaleNumber": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "listingforrentHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "listingforrentNumber": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "propertysoldHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "propertysoldNumber": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "popularPropertiesHeading": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "popularPropertiesSubHeading": {
       "type": "string",
-      "required": false
+      "required": true
     }
   }
 }

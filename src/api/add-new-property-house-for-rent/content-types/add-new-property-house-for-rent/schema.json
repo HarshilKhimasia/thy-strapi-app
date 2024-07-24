@@ -4,7 +4,8 @@
   "info": {
     "singularName": "add-new-property-house-for-rent",
     "pluralName": "add-new-property-house-for-rents",
-    "displayName": "Add New Property (House For Rent)"
+    "displayName": "Add New Property (House For Rent)",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,7 +23,8 @@
     "AddingZone": {
       "type": "component",
       "repeatable": false,
-      "component": "add-property-category.add-property"
+      "component": "add-property-category.add-property",
+      "required": true
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "add-new-property-commercial-for-sale",
     "pluralName": "add-new-property-commercial-for-sales",
-    "displayName": "Add New Property (Commercial For Sale)"
+    "displayName": "Add New Property (Commercial For Sale)",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,7 +23,8 @@
     "AddingZone": {
       "type": "component",
       "repeatable": false,
-      "component": "add-property-category.add-property"
+      "component": "add-property-category.add-property",
+      "required": true
     }
   }
 }

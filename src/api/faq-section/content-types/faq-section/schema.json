@@ -4,7 +4,8 @@
   "info": {
     "singularName": "faq-section",
     "pluralName": "faq-sections",
-    "displayName": "FAQ Section"
+    "displayName": "FAQ Section",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "mainQuestion": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "questionNAnswer": {
       "type": "dynamiczone",
       "components": [
         "faq.question-answer-component"
-      ]
+      ],
+      "required": true
     }
   }
 }

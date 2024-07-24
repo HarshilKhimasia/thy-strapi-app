@@ -7,10 +7,12 @@
   "options": {},
   "attributes": {
     "linkListItem": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

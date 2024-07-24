@@ -4,7 +4,8 @@
   "info": {
     "singularName": "exclusive-agents-section-carousel",
     "pluralName": "exclusive-agents-section-carousels",
-    "displayName": "Exclusive Agents Section Carousel"
+    "displayName": "Exclusive Agents Section Carousel",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,20 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "Image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Designation": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

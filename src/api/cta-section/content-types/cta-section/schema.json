@@ -13,19 +13,24 @@
   "pluginOptions": {},
   "attributes": {
     "pageCta": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "ctaHeading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "buttonText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "numberButtonText": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "ctaSubHeading": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

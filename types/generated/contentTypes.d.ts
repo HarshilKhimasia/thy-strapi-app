@@ -800,8 +800,8 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    pageHeading: Attribute.String;
-    pageBannerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    pageHeading: Attribute.String & Attribute.Required;
+    pageBannerImage: Attribute.Media<'images'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -833,7 +833,8 @@ export interface ApiAboutPageMetadataAboutPageMetadata
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -880,7 +881,8 @@ export interface ApiAddNewPropertyCommercialForRentAddNewPropertyCommercialForRe
           'disable-regenerate': true;
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -906,6 +908,7 @@ export interface ApiAddNewPropertyCommercialForSaleAddNewPropertyCommercialForSa
     singularName: 'add-new-property-commercial-for-sale';
     pluralName: 'add-new-property-commercial-for-sales';
     displayName: 'Add New Property (Commercial For Sale)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -926,7 +929,8 @@ export interface ApiAddNewPropertyCommercialForSaleAddNewPropertyCommercialForSa
           'uuid-format': 'CS[1-9]\\d{5}';
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -952,6 +956,7 @@ export interface ApiAddNewPropertyFlatForRentAddNewPropertyFlatForRent
     singularName: 'add-new-property-flat-for-rent';
     pluralName: 'add-new-property-flat-for-rents';
     displayName: 'Add New Property (Flat For Rent)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -972,7 +977,8 @@ export interface ApiAddNewPropertyFlatForRentAddNewPropertyFlatForRent
           'disable-regenerate': true;
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -998,6 +1004,7 @@ export interface ApiAddNewPropertyFlatForSaleAddNewPropertyFlatForSale
     singularName: 'add-new-property-flat-for-sale';
     pluralName: 'add-new-property-flat-for-sales';
     displayName: 'Add New Property (Flat For Sale)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1018,7 +1025,8 @@ export interface ApiAddNewPropertyFlatForSaleAddNewPropertyFlatForSale
           'disable-regenerate': true;
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1044,6 +1052,7 @@ export interface ApiAddNewPropertyHouseForRentAddNewPropertyHouseForRent
     singularName: 'add-new-property-house-for-rent';
     pluralName: 'add-new-property-house-for-rents';
     displayName: 'Add New Property (House For Rent)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1064,7 +1073,8 @@ export interface ApiAddNewPropertyHouseForRentAddNewPropertyHouseForRent
           'disable-regenerate': true;
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1090,6 +1100,7 @@ export interface ApiAddNewPropertyHouseForSaleAddNewPropertyHouseForSale
     singularName: 'add-new-property-house-for-sale';
     pluralName: 'add-new-property-house-for-sales';
     displayName: 'Add New Property (House For Sale)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1110,7 +1121,8 @@ export interface ApiAddNewPropertyHouseForSaleAddNewPropertyHouseForSale
           'disable-regenerate': true;
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1136,6 +1148,7 @@ export interface ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent
     singularName: 'add-new-property-office-for-rent';
     pluralName: 'add-new-property-office-for-rents';
     displayName: 'Add New Property (Office For Rent)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1156,7 +1169,8 @@ export interface ApiAddNewPropertyOfficeForRentAddNewPropertyOfficeForRent
           'uuid-format': 'OL[1-9]\\d{5}';
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1182,6 +1196,7 @@ export interface ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale
     singularName: 'add-new-property-office-for-sale';
     pluralName: 'add-new-property-office-for-sales';
     displayName: 'Add New Property (Office For Sale)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1202,7 +1217,8 @@ export interface ApiAddNewPropertyOfficeForSaleAddNewPropertyOfficeForSale
           'uuid-format': 'OS[1-9]\\d{5}';
         }
       >;
-    AddingZone: Attribute.Component<'add-property-category.add-property'>;
+    AddingZone: Attribute.Component<'add-property-category.add-property'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1228,12 +1244,13 @@ export interface ApiAdvanceFilterLocationAdvanceFilterLocation
     singularName: 'advance-filter-location';
     pluralName: 'advance-filter-locations';
     displayName: 'Advance Filter Location';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Location: Attribute.String;
+    Location: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1258,13 +1275,14 @@ export interface ApiAllPolicyAllPolicy extends Schema.CollectionType {
     singularName: 'all-policy';
     pluralName: 'all-policies';
     displayName: 'All Policy';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    policyName: Attribute.String;
-    policyFile: Attribute.Media<'files'>;
+    policyName: Attribute.String & Attribute.Required;
+    policyFile: Attribute.Media<'files'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1295,7 +1313,7 @@ export interface ApiAwardMainImageAwardMainImage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    mainImage: Attribute.Media<'images'> & Attribute.Required;
     caption: Attribute.String &
       Attribute.Private &
       Attribute.DefaultTo<'default'>;
@@ -1317,52 +1335,20 @@ export interface ApiAwardMainImageAwardMainImage extends Schema.SingleType {
   };
 }
 
-export interface ApiAwardSectionDetailAwardSectionDetail
-  extends Schema.CollectionType {
-  collectionName: 'award_section_details';
-  info: {
-    singularName: 'award-section-detail';
-    pluralName: 'award-section-details';
-    displayName: 'Award Section Detail';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Number: Attribute.String;
-    Unit: Attribute.String;
-    Text: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::award-section-detail.award-section-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::award-section-detail.award-section-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiComparePageComparePage extends Schema.SingleType {
   collectionName: 'compare_pages';
   info: {
     singularName: 'compare-page';
     pluralName: 'compare-pages';
     displayName: 'Compare Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    pageHeading: Attribute.String;
-    mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    pageHeading: Attribute.String & Attribute.Required;
+    mainImage: Attribute.Media<'images'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1388,12 +1374,14 @@ export interface ApiComparePageMetadataComparePageMetadata
     singularName: 'compare-page-metadata';
     pluralName: 'compare-page-metadatas';
     displayName: 'Compare Page Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1419,16 +1407,18 @@ export interface ApiContactPageFormContactPageForm
     singularName: 'contact-page-form';
     pluralName: 'contact-page-forms';
     displayName: 'Contact Page Form';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    formHeading: Attribute.String;
+    formHeading: Attribute.String & Attribute.Required;
     fieldZone: Attribute.DynamicZone<
       ['contact-page.contact-page-form-field-component']
-    >;
-    formButtonText: Attribute.String;
+    > &
+      Attribute.Required;
+    formButtonText: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1453,13 +1443,14 @@ export interface ApiContactPageIntroContactPageIntro extends Schema.SingleType {
     singularName: 'contact-page-intro';
     pluralName: 'contact-page-intros';
     displayName: 'Contact Page Intro';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.String;
-    para: Attribute.Text;
+    heading: Attribute.String & Attribute.Required;
+    para: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1485,12 +1476,14 @@ export interface ApiContactPageMetadataContactPageMetadata
     singularName: 'contact-page-metadata';
     pluralName: 'contact-page-metadatas';
     displayName: 'Contact Page Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1521,11 +1514,11 @@ export interface ApiCtaSectionCtaSection extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    pageCta: Attribute.String;
-    ctaHeading: Attribute.String;
-    buttonText: Attribute.String;
-    numberButtonText: Attribute.String;
-    ctaSubHeading: Attribute.Text;
+    pageCta: Attribute.String & Attribute.Required;
+    ctaHeading: Attribute.String & Attribute.Required;
+    buttonText: Attribute.String & Attribute.Required;
+    numberButtonText: Attribute.String & Attribute.Required;
+    ctaSubHeading: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1551,13 +1544,14 @@ export interface ApiExclusiveAgentsSectionExclusiveAgentsSection
     singularName: 'exclusive-agents-section';
     pluralName: 'exclusive-agents-sections';
     displayName: 'Exclusive Agents Section';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.String;
-    subHeading: Attribute.Text;
+    heading: Attribute.String & Attribute.Required;
+    subHeading: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1583,14 +1577,15 @@ export interface ApiExclusiveAgentsSectionCarouselExclusiveAgentsSectionCarousel
     singularName: 'exclusive-agents-section-carousel';
     pluralName: 'exclusive-agents-section-carousels';
     displayName: 'Exclusive Agents Section Carousel';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Title: Attribute.String;
-    Designation: Attribute.String;
+    Image: Attribute.Media<'images'> & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
+    Designation: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1615,12 +1610,13 @@ export interface ApiFaqPageFaqPage extends Schema.SingleType {
     singularName: 'faq-page';
     pluralName: 'faq-pages';
     displayName: 'FAQ Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    pageHeading: Attribute.String;
+    pageHeading: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1645,12 +1641,14 @@ export interface ApiFaqPageMetadataFaqPageMetadata extends Schema.SingleType {
     singularName: 'faq-page-metadata';
     pluralName: 'faq-page-metadatas';
     displayName: 'FAQ Page Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1675,13 +1673,15 @@ export interface ApiFaqSectionFaqSection extends Schema.CollectionType {
     singularName: 'faq-section';
     pluralName: 'faq-sections';
     displayName: 'FAQ Section';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    mainQuestion: Attribute.String;
-    questionNAnswer: Attribute.DynamicZone<['faq.question-answer-component']>;
+    mainQuestion: Attribute.String & Attribute.Required;
+    questionNAnswer: Attribute.DynamicZone<['faq.question-answer-component']> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1712,28 +1712,34 @@ export interface ApiFooterFooter extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    AddressTitle: Attribute.String;
-    FullAddress: Attribute.Text;
-    PhoneTitle: Attribute.String;
-    FullPhoneNumber: Attribute.String;
-    FollowUsTitle: Attribute.String;
+    footerLogo: Attribute.Media<'images'> & Attribute.Required;
+    AddressTitle: Attribute.String & Attribute.Required;
+    FullAddress: Attribute.Text & Attribute.Required;
+    PhoneTitle: Attribute.String & Attribute.Required;
+    FullPhoneNumber: Attribute.String & Attribute.Required;
+    FollowUsTitle: Attribute.String & Attribute.Required;
     FooterSocialIconsZone: Attribute.DynamicZone<
       ['footer-category.social-icons']
-    >;
-    MonthlyNewsletterTitle: Attribute.String;
+    > &
+      Attribute.Required;
+    MonthlyNewsletterTitle: Attribute.String & Attribute.Required;
     PopularSearchZone: Attribute.DynamicZone<
       ['footer-category.popular-search-links-list']
-    >;
-    QuickLinksZone: Attribute.DynamicZone<['footer-category.quick-links-list']>;
+    > &
+      Attribute.Required;
+    QuickLinksZone: Attribute.DynamicZone<
+      ['footer-category.quick-links-list']
+    > &
+      Attribute.Required;
     DiscoverLinksZone: Attribute.DynamicZone<
       ['footer-category.discover-links-list']
-    >;
-    SendEmailTitle: Attribute.String;
-    FullSendEmail: Attribute.String;
-    PopularSearchTitle: Attribute.String;
-    QuickLinksTitle: Attribute.String;
-    DiscoverLinksTitle: Attribute.String;
+    > &
+      Attribute.Required;
+    SendEmailTitle: Attribute.String & Attribute.Required;
+    FullSendEmail: Attribute.String & Attribute.Required;
+    PopularSearchTitle: Attribute.String & Attribute.Required;
+    QuickLinksTitle: Attribute.String & Attribute.Required;
+    DiscoverLinksTitle: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1759,16 +1765,17 @@ export interface ApiGetMoreInformationGetMoreInformation
     singularName: 'get-more-information';
     pluralName: 'get-more-informations';
     displayName: 'Get More Information';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
-    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Name: Attribute.String;
-    PhoneNumber: Attribute.String;
-    FormButtonText: Attribute.String;
+    Heading: Attribute.String & Attribute.Required;
+    Image: Attribute.Media<'images'> & Attribute.Required;
+    Name: Attribute.String & Attribute.Required;
+    PhoneNumber: Attribute.String & Attribute.Required;
+    FormButtonText: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1799,22 +1806,24 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    heroSectionHeading: Attribute.String;
-    featuredSectionHeading: Attribute.String;
-    featuredSectionSubHeading: Attribute.Text;
-    discoverPopularPropertiesSectionHeading: Attribute.String;
-    discoverPopularPropertiesSectionSubHeading: Attribute.String;
-    experienceSectionHeading: Attribute.String;
-    experienceSectionSubHeading: Attribute.Text;
-    experienceSectionButtonText: Attribute.String;
-    ListingforsaleHeading: Attribute.String;
-    listingforsaleNumber: Attribute.String;
-    listingforrentHeading: Attribute.String;
-    listingforrentNumber: Attribute.String;
-    propertysoldHeading: Attribute.String;
-    propertysoldNumber: Attribute.String;
-    popularPropertiesHeading: Attribute.String;
-    popularPropertiesSubHeading: Attribute.String;
+    heroSectionHeading: Attribute.String & Attribute.Required;
+    featuredSectionHeading: Attribute.String & Attribute.Required;
+    featuredSectionSubHeading: Attribute.Text & Attribute.Required;
+    discoverPopularPropertiesSectionHeading: Attribute.String &
+      Attribute.Required;
+    discoverPopularPropertiesSectionSubHeading: Attribute.String &
+      Attribute.Required;
+    experienceSectionHeading: Attribute.String & Attribute.Required;
+    experienceSectionSubHeading: Attribute.Text & Attribute.Required;
+    experienceSectionButtonText: Attribute.String & Attribute.Required;
+    ListingforsaleHeading: Attribute.String & Attribute.Required;
+    listingforsaleNumber: Attribute.String & Attribute.Required;
+    listingforrentHeading: Attribute.String & Attribute.Required;
+    listingforrentNumber: Attribute.String & Attribute.Required;
+    propertysoldHeading: Attribute.String & Attribute.Required;
+    propertysoldNumber: Attribute.String & Attribute.Required;
+    popularPropertiesHeading: Attribute.String & Attribute.Required;
+    popularPropertiesSubHeading: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1839,12 +1848,14 @@ export interface ApiHomePageMetadataHomePageMetadata extends Schema.SingleType {
     singularName: 'home-page-metadata';
     pluralName: 'home-page-metadatas';
     displayName: 'Home Page Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1870,12 +1881,14 @@ export interface ApiIndividualPropertyPageMetadataIndividualPropertyPageMetadata
     singularName: 'individual-property-page-metadata';
     pluralName: 'individual-property-page-metadatas';
     displayName: 'Individual Property Page Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1906,23 +1919,24 @@ export interface ApiInquiryFormInquiryForm extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.String;
-    subHeading: Attribute.String;
-    selectdepartmentHeading: Attribute.String;
-    titleTitle: Attribute.String;
-    FirstNameTitle: Attribute.String;
-    MiddleNameTitle: Attribute.String;
-    SurnameTitle: Attribute.String;
-    EmailTitle: Attribute.String;
-    PhoneTitle: Attribute.String;
-    contactinOnBehalfTitle: Attribute.Text;
-    preferredMethodTitle: Attribute.String;
-    messageTitle: Attribute.String;
-    formButtontext: Attribute.String;
-    formMainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    selectDepratmentList: Attribute.Blocks;
-    TitleList: Attribute.Blocks;
-    preferredMethodList: Attribute.Blocks;
+    heading: Attribute.String & Attribute.Required;
+    subHeading: Attribute.String & Attribute.Required;
+    selectdepartmentHeading: Attribute.String & Attribute.Required;
+    titleTitle: Attribute.String & Attribute.Required;
+    FirstNameTitle: Attribute.String & Attribute.Required;
+    MiddleNameTitle: Attribute.String & Attribute.Required;
+    SurnameTitle: Attribute.String & Attribute.Required;
+    EmailTitle: Attribute.String & Attribute.Required;
+    PhoneTitle: Attribute.String & Attribute.Required;
+    contactinOnBehalfTitle: Attribute.Text & Attribute.Required;
+    preferredMethodTitle: Attribute.String & Attribute.Required;
+    messageTitle: Attribute.String & Attribute.Required;
+    formButtontext: Attribute.String & Attribute.Required;
+    formMainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    selectDepratmentList: Attribute.Blocks & Attribute.Required;
+    TitleList: Attribute.Blocks & Attribute.Required;
+    preferredMethodList: Attribute.Blocks & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1953,7 +1967,7 @@ export interface ApiMissionSectionMissionSection extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    missionPara: Attribute.Text;
+    missionPara: Attribute.Text & Attribute.Required;
     isHeading: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
@@ -1975,39 +1989,6 @@ export interface ApiMissionSectionMissionSection extends Schema.CollectionType {
   };
 }
 
-export interface ApiMissionSectionDetailMissionSectionDetail
-  extends Schema.CollectionType {
-  collectionName: 'mission_section_details';
-  info: {
-    singularName: 'mission-section-detail';
-    pluralName: 'mission-section-details';
-    displayName: 'Mission Section Detail';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    heading: Attribute.String;
-    subHeading: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::mission-section-detail.mission-section-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::mission-section-detail.mission-section-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiMissionSectionHeadingMissionSectionHeading
   extends Schema.SingleType {
   collectionName: 'mission_section_headings';
@@ -2015,12 +1996,13 @@ export interface ApiMissionSectionHeadingMissionSectionHeading
     singularName: 'mission-section-heading';
     pluralName: 'mission-section-headings';
     displayName: 'Mission Section Heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.String;
+    heading: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2046,13 +2028,14 @@ export interface ApiNearbySimilarPropertyNearbySimilarProperty
     singularName: 'nearby-similar-property';
     pluralName: 'nearby-similar-properties';
     displayName: 'Nearby Similar Property';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
-    subHeading: Attribute.Text;
+    Heading: Attribute.String & Attribute.Required;
+    subHeading: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2078,17 +2061,15 @@ export interface ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership
     singularName: 'our-accreditations-and-membership';
     pluralName: 'our-accreditations-and-memberships';
     displayName: 'Our accreditations & membership';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
-    subHeading: Attribute.Text;
-    partnerImages: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    Heading: Attribute.String & Attribute.Required;
+    subHeading: Attribute.Text & Attribute.Required;
+    partnerImages: Attribute.Media<'images', true> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2114,12 +2095,14 @@ export interface ApiPolicyPageMetadataPolicyPageMetadata
     singularName: 'policy-page-metadata';
     pluralName: 'policy-page-metadatas';
     displayName: 'Policy Page Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2145,90 +2128,25 @@ export interface ApiPropertiesListingPageMetadataPropertiesListingPageMetadata
     singularName: 'properties-listing-page-metadata';
     pluralName: 'properties-listing-page-metadatas';
     displayName: 'Properties Listing Page Metadata';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::properties-listing-page-metadata.properties-listing-page-metadata',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::properties-listing-page-metadata.properties-listing-page-metadata',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiRightSellingSectionRightSellingSection
-  extends Schema.SingleType {
-  collectionName: 'right_selling_sections';
-  info: {
-    singularName: 'right-selling-section';
-    pluralName: 'right-selling-sections';
-    displayName: 'Right Selling Section';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heading: Attribute.String;
-    buttonText: Attribute.String;
-    mainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::right-selling-section.right-selling-section',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::right-selling-section.right-selling-section',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiRightSellingSectionDetailRightSellingSectionDetail
-  extends Schema.CollectionType {
-  collectionName: 'right_selling_section_details';
-  info: {
-    singularName: 'right-selling-section-detail';
-    pluralName: 'right-selling-section-details';
-    displayName: 'Right Selling Section Detail';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    heading: Attribute.String;
-    subHeading: Attribute.Text;
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::right-selling-section-detail.right-selling-section-detail',
+      'api::properties-listing-page-metadata.properties-listing-page-metadata',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::right-selling-section-detail.right-selling-section-detail',
+      'api::properties-listing-page-metadata.properties-listing-page-metadata',
       'oneToOne',
       'admin::user'
     > &
@@ -2242,14 +2160,15 @@ export interface ApiScheduleATourScheduleATour extends Schema.SingleType {
     singularName: 'schedule-a-tour';
     pluralName: 'schedule-a-tours';
     displayName: 'Schedule a tour';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Heading: Attribute.String;
-    subHeading: Attribute.String;
-    buttonText: Attribute.String;
+    Heading: Attribute.String & Attribute.Required;
+    subHeading: Attribute.String & Attribute.Required;
+    buttonText: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2280,11 +2199,12 @@ export interface ApiVisitOurOfficeVisitOurOffice extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.String;
-    subHeading: Attribute.Text;
+    heading: Attribute.String & Attribute.Required;
+    subHeading: Attribute.Text & Attribute.Required;
     locationZone: Attribute.DynamicZone<
       ['contact-page.contact-page-location-component']
-    >;
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2334,7 +2254,6 @@ declare module '@strapi/types' {
       'api::advance-filter-location.advance-filter-location': ApiAdvanceFilterLocationAdvanceFilterLocation;
       'api::all-policy.all-policy': ApiAllPolicyAllPolicy;
       'api::award-main-image.award-main-image': ApiAwardMainImageAwardMainImage;
-      'api::award-section-detail.award-section-detail': ApiAwardSectionDetailAwardSectionDetail;
       'api::compare-page.compare-page': ApiComparePageComparePage;
       'api::compare-page-metadata.compare-page-metadata': ApiComparePageMetadataComparePageMetadata;
       'api::contact-page-form.contact-page-form': ApiContactPageFormContactPageForm;
@@ -2353,14 +2272,11 @@ declare module '@strapi/types' {
       'api::individual-property-page-metadata.individual-property-page-metadata': ApiIndividualPropertyPageMetadataIndividualPropertyPageMetadata;
       'api::inquiry-form.inquiry-form': ApiInquiryFormInquiryForm;
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
-      'api::mission-section-detail.mission-section-detail': ApiMissionSectionDetailMissionSectionDetail;
       'api::mission-section-heading.mission-section-heading': ApiMissionSectionHeadingMissionSectionHeading;
       'api::nearby-similar-property.nearby-similar-property': ApiNearbySimilarPropertyNearbySimilarProperty;
       'api::our-accreditations-and-membership.our-accreditations-and-membership': ApiOurAccreditationsAndMembershipOurAccreditationsAndMembership;
       'api::policy-page-metadata.policy-page-metadata': ApiPolicyPageMetadataPolicyPageMetadata;
       'api::properties-listing-page-metadata.properties-listing-page-metadata': ApiPropertiesListingPageMetadataPropertiesListingPageMetadata;
-      'api::right-selling-section.right-selling-section': ApiRightSellingSectionRightSellingSection;
-      'api::right-selling-section-detail.right-selling-section-detail': ApiRightSellingSectionDetailRightSellingSectionDetail;
       'api::schedule-a-tour.schedule-a-tour': ApiScheduleATourScheduleATour;
       'api::visit-our-office.visit-our-office': ApiVisitOurOfficeVisitOurOffice;
     }
