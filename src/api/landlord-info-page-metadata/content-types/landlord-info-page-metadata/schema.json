@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "landlord_info_page_metadatas",
+  "info": {
+    "singularName": "landlord-info-page-metadata",
+    "pluralName": "landlord-info-page-metadatas",
+    "displayName": "Landlord Info Page Metadata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageMetaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-data.meta-data-component"
+    }
+  }
+}

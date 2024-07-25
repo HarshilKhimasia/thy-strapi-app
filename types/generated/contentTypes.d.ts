@@ -1955,6 +1955,69 @@ export interface ApiInquiryFormInquiryForm extends Schema.SingleType {
   };
 }
 
+export interface ApiInvestorIndoPageMetadataInvestorIndoPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'investor_indo_page_metadatas';
+  info: {
+    singularName: 'investor-indo-page-metadata';
+    pluralName: 'investor-indo-page-metadatas';
+    displayName: 'Investor Info Page Metadata';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::investor-indo-page-metadata.investor-indo-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::investor-indo-page-metadata.investor-indo-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLandlordInfoPageMetadataLandlordInfoPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'landlord_info_page_metadatas';
+  info: {
+    singularName: 'landlord-info-page-metadata';
+    pluralName: 'landlord-info-page-metadatas';
+    displayName: 'Landlord Info Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::landlord-info-page-metadata.landlord-info-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::landlord-info-page-metadata.landlord-info-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMissionSectionMissionSection extends Schema.CollectionType {
   collectionName: 'mission_sections';
   info: {
@@ -2187,6 +2250,37 @@ export interface ApiScheduleATourScheduleATour extends Schema.SingleType {
   };
 }
 
+export interface ApiTenantInfoPageMetadataTenantInfoPageMetadata
+  extends Schema.SingleType {
+  collectionName: 'tenant_info_page_metadatas';
+  info: {
+    singularName: 'tenant-info-page-metadata';
+    pluralName: 'tenant-info-page-metadatas';
+    displayName: 'Tenant Info Page Metadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageMetaData: Attribute.Component<'meta-data.meta-data-component'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tenant-info-page-metadata.tenant-info-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tenant-info-page-metadata.tenant-info-page-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiVisitOurOfficeVisitOurOffice extends Schema.CollectionType {
   collectionName: 'visit_our_offices';
   info: {
@@ -2271,6 +2365,8 @@ declare module '@strapi/types' {
       'api::home-page-metadata.home-page-metadata': ApiHomePageMetadataHomePageMetadata;
       'api::individual-property-page-metadata.individual-property-page-metadata': ApiIndividualPropertyPageMetadataIndividualPropertyPageMetadata;
       'api::inquiry-form.inquiry-form': ApiInquiryFormInquiryForm;
+      'api::investor-indo-page-metadata.investor-indo-page-metadata': ApiInvestorIndoPageMetadataInvestorIndoPageMetadata;
+      'api::landlord-info-page-metadata.landlord-info-page-metadata': ApiLandlordInfoPageMetadataLandlordInfoPageMetadata;
       'api::mission-section.mission-section': ApiMissionSectionMissionSection;
       'api::mission-section-heading.mission-section-heading': ApiMissionSectionHeadingMissionSectionHeading;
       'api::nearby-similar-property.nearby-similar-property': ApiNearbySimilarPropertyNearbySimilarProperty;
@@ -2278,6 +2374,7 @@ declare module '@strapi/types' {
       'api::policy-page-metadata.policy-page-metadata': ApiPolicyPageMetadataPolicyPageMetadata;
       'api::properties-listing-page-metadata.properties-listing-page-metadata': ApiPropertiesListingPageMetadataPropertiesListingPageMetadata;
       'api::schedule-a-tour.schedule-a-tour': ApiScheduleATourScheduleATour;
+      'api::tenant-info-page-metadata.tenant-info-page-metadata': ApiTenantInfoPageMetadataTenantInfoPageMetadata;
       'api::visit-our-office.visit-our-office': ApiVisitOurOfficeVisitOurOffice;
     }
   }
